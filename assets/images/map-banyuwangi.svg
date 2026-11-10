@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" width="100%" height="100%" fill="none" role="img" aria-labelledby="mapTitle mapDesc">
+  <title id="mapTitle">Peta Wilayah Layanan CareWangi - Kabupaten Banyuwangi</title>
+  <desc id="mapDesc">Ilustrasi wilayah geografis Kabupaten Banyuwangi dengan penanda area layanan kesehatan panggilan ke rumah.</desc>
+  <defs>
+    <linearGradient id="mapBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2F8F5" />
+      <stop offset="100%" stop-color="#E5EFE9" />
+    </linearGradient>
+    <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E6454" />
+      <stop offset="100%" stop-color="#094438" />
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5A84D" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#D9963B" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadowFilter" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#06382E" flood-opacity="0.18" />
+    </filter>
+    <filter id="pinShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background with Grid & Sea Contour -->
+  <rect width="680" height="500" rx="20" fill="url(#mapBgGrad)" />
+
+  <!-- Grid lines for cartographic look -->
+  <g stroke="#C8DCD1" stroke-width="1" stroke-dasharray="3 4" opacity="0.6">
+    <line x1="80" y1="0" x2="80" y2="500" />
+    <line x1="200" y1="0" x2="200" y2="500" />
+    <line x1="320" y1="0" x2="320" y2="500" />
+    <line x1="440" y1="0" x2="440" y2="500" />
+    <line x1="560" y1="0" x2="560" y2="500" />
+    <line x1="0" y1="100" x2="680" y2="100" />
+    <line x1="0" y1="220" x2="680" y2="220" />
+    <line x1="0" y1="340" x2="680" y2="340" />
+    <line x1="0" y1="440" x2="680" y2="440" />
+  </g>
+
+  <!-- Watermarks & Ocean details (Selat Bali & Samudra Hindia) -->
+  <g fill="#88AFA0" opacity="0.75" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" letter-spacing="2.5">
+    <text x="560" y="160" font-size="11" transform="rotate(75 560,160)">SELAT BALI</text>
+    <text x="360" y="475" font-size="11">SAMUDRA HINDIA</text>
+    <text x="45" y="65" font-size="10" opacity="0.7">KAB. BONDOWOSO / JEMBER</text>
+  </g>
+
+  <!-- Waves pattern in ocean area -->
+  <g stroke="#97BDB0" stroke-width="1.5" stroke-linecap="round" opacity="0.5">
+    <path d="M530 220 c 8 -4, 16 -4, 24 0" />
+    <path d="M545 228 c 8 -4, 16 -4, 24 0" />
+    <path d="M560 310 c 8 -4, 16 -4, 24 0" />
+    <path d="M580 320 c 8 -4, 16 -4, 24 0" />
+    <path d="M460 460 c 8 -4, 16 -4, 24 0" />
+    <path d="M480 470 c 8 -4, 16 -4, 24 0" />
+  </g>
+
+  <!-- Banyuwangi Land Boundary Silhouette (East Java's easternmost regency + Blambangan peninsula) -->
+  <!-- Shape represents: North (Wongsorejo/Baluran border), West (Ijen/Raung mountain ridge), South (Grajaan/Pesanggaran coast), East (Ketapang/Banyuwangi coast), South-East (Semenanjung Blambangan / Alas Purwo) -->
+  <path d="
+    M 360 48
+    C 410 45, 450 70, 475 105
+    C 485 120, 480 145, 472 170
+    C 468 185, 478 200, 490 220
+    C 502 240, 520 270, 535 300
+    C 545 320, 570 345, 605 365
+    C 625 378, 630 395, 610 405
+    C 580 418, 540 415, 500 395
+    C 470 380, 440 375, 410 380
+    C 380 385, 345 410, 310 420
+    C 270 430, 230 425, 205 405
+    C 180 385, 175 350, 185 320
+    C 192 300, 180 275, 165 255
+    C 145 225, 140 190, 155 160
+    C 170 130, 210 110, 245 95
+    C 280 80, 320 52, 360 48
+    Z"
+    fill="url(#landGrad)"
+    filter="url(#shadowFilter)"
+  />
+
+  <!-- Topographic mountain contour of Ijen caldera & highlands in the west -->
+  <path d="
+    M 210 130
+    C 230 115, 265 105, 290 125
+    C 310 140, 300 170, 280 185
+    C 255 200, 220 185, 205 165
+    C 198 150, 202 135, 210 130 Z"
+    fill="#137562"
+    opacity="0.6"
+  />
+  <path d="
+    M 235 140
+    C 248 132, 270 126, 280 138
+    C 288 148, 280 162, 268 168
+    C 252 176, 235 165, 230 152
+    C 228 145, 231 142, 235 140 Z"
+    fill="#1D8A74"
+    opacity="0.8"
+  />
+  <!-- Mountain peak indicator -->
+  <g transform="translate(255, 145)">
+    <polygon points="0,-8 7,5 -7,5" fill="#E5A84D" />
+    <text x="12" y="2" fill="#E8F4EE" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">Kawasan Ijen</text>
+  </g>
+
+  <!-- Forest reserve / Alas Purwo area in Southeast -->
+  <path d="
+    M 515 375
+    C 540 370, 570 380, 595 385
+    C 590 398, 565 405, 540 400
+    C 525 396, 515 388, 515 375 Z"
+    fill="#137562"
+    opacity="0.5"
+  />
+  <text x="525" y="392" fill="#C0DFD3" font-size="8.5" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" opacity="0.85">Alas Purwo</text>
+
+  <!-- Major road / connectivity network lines connecting service nodes -->
+  <g stroke="#39A088" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.75" stroke-dasharray="4 3">
+    <!-- North highway: Wongsorejo to Banyuwangi Kota -->
+    <path d="M 445 105 L 470 175 L 465 210" />
+    <!-- Banyuwangi Kota to Rogojampi -->
+    <path d="M 465 210 L 430 255" />
+    <!-- Rogojampi to Genteng -->
+    <path d="M 430 255 L 350 285" />
+    <!-- Rogojampi to Srono & Muncar -->
+    <path d="M 430 255 L 420 310 L 460 325" />
+    <!-- Genteng to Glenmore -->
+    <path d="M 350 285 L 260 305" />
+  </g>
+
+  <!-- Central Service Hub: Radar Waves on Banyuwangi Kota -->
+  <g transform="translate(465, 210)">
+    <circle r="46" fill="url(#accentGlow)" />
+    <circle r="34" stroke="#E5A84D" stroke-width="1.5" stroke-opacity="0.4" fill="none">
+      <animate attributeName="r" values="18;48" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle r="20" stroke="#E5A84D" stroke-width="1.5" stroke-opacity="0.7" fill="#E5A84D" fill-opacity="0.15" />
+    <!-- Pin marker -->
+    <g filter="url(#pinShadow)">
+      <path d="M 0 0 C -7 -14, -12 -22, -12 -30 A 12 12 0 1 1 12 -30 C 12 -22, 7 -14, 0 0 Z" fill="#D9963B" />
+      <circle cx="0" cy="-30" r="5" fill="#FFFFFF" />
+    </g>
+  </g>
+
+  <!-- District Location Pins & Tags -->
+  <!-- Banyuwangi Kota Callout -->
+  <g transform="translate(465, 170)">
+    <rect x="-10" y="-36" width="165" height="30" rx="8" fill="#FFFFFF" filter="url(#pinShadow)" />
+    <circle cx="4" cy="-21" r="4" fill="#0C5A4C" />
+    <text x="14" y="-23" fill="#192823" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11">Banyuwangi Kota</text>
+    <text x="14" y="-12" fill="#0C5A4C" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9">Pusat Layanan Kunjungan</text>
+  </g>
+
+  <!-- Rogojampi Pin -->
+  <g transform="translate(430, 255)">
+    <circle r="6" fill="#E5A84D" filter="url(#pinShadow)" />
+    <circle r="2.5" fill="#FFFFFF" />
+    <rect x="12" y="-10" width="84" height="20" rx="5" fill="#FFFFFF" opacity="0.95" />
+    <text x="18" y="4" fill="#192823" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5">Rogojampi</text>
+  </g>
+
+  <!-- Genteng Pin -->
+  <g transform="translate(350, 285)">
+    <circle r="6" fill="#E5A84D" filter="url(#pinShadow)" />
+    <circle r="2.5" fill="#FFFFFF" />
+    <rect x="-88" y="-10" width="76" height="20" rx="5" fill="#FFFFFF" opacity="0.95" />
+    <text x="-82" y="4" fill="#192823" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5">Genteng</text>
+  </g>
+
+  <!-- Muncar Pin -->
+  <g transform="translate(460, 325)">
+    <circle r="5" fill="#52B79E" />
+    <circle r="2" fill="#FFFFFF" />
+    <text x="10" y="3" fill="#E8F4EE" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9">Muncar</text>
+  </g>
+
+  <!-- Srono Pin -->
+  <g transform="translate(415, 310)">
+    <circle r="4.5" fill="#52B79E" />
+    <circle r="1.8" fill="#FFFFFF" />
+    <text x="-38" y="3" fill="#E8F4EE" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="8.5">Srono</text>
+  </g>
+
+  <!-- Giri / Glagah Pin -->
+  <g transform="translate(435, 195)">
+    <circle r="4.5" fill="#52B79E" />
+    <circle r="1.8" fill="#FFFFFF" />
+    <text x="-65" y="3" fill="#E8F4EE" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="8.5">Giri &amp; Glagah</text>
+  </g>
+
+  <!-- Compass Rose (North Arrow) -->
+  <g transform="translate(620, 55)">
+    <circle r="22" fill="#FFFFFF" filter="url(#pinShadow)" />
+    <!-- North Pointer -->
+    <polygon points="0,-16 5,0 0,-4 -5,0" fill="#0C5A4C" />
+    <polygon points="0,16 5,0 0,4 -5,0" fill="#C2D8CB" />
+    <text x="-4" y="-7" fill="#0C5A4C" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10">U</text>
+  </g>
+
+  <!-- Interactive / Floating Legend Card inside the Map -->
+  <g transform="translate(30, 360)">
+    <rect width="230" height="105" rx="12" fill="#FFFFFF" filter="url(#shadowFilter)" />
+    <!-- Header of card -->
+    <circle cx="22" cy="24" r="5" fill="#0E6454" />
+    <circle cx="22" cy="24" r="2.5" fill="#E5A84D" />
+    <text x="36" y="28" fill="#192823" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11.5">Wilayah Layanan Aktif</text>
+    
+    <line x1="16" y1="42" x2="214" y2="42" stroke="#E1ECE5" stroke-width="1" />
+    
+    <g transform="translate(18, 58)">
+      <circle cx="6" cy="4" r="4" fill="#D9963B" />
+      <text x="16" y="7" fill="#3D524C" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10">Kabupaten Banyuwangi, Jatim</text>
+    </g>
+
+    <g transform="translate(18, 80)">
+      <rect x="0" y="-1" width="12" height="12" rx="3" fill="#EBF3EF" />
+      <path d="M2.5 5 L5 7.5 L9.5 3" stroke="#0E6454" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <text x="16" y="8" fill="#52655F" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="9.5">Informasi Kunjungan Rumah</text>
+    </g>
+  </g>
+
+</svg>
