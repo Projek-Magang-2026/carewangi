@@ -147,4 +147,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear().toString();
   }
+
+  /* ------------------------------------------------------------------------
+     7. FLOATING WHATSAPP BUTTON (Konfigurasi & Pengelolaan Tautan)
+     ------------------------------------------------------------------------ */
+  // Konfigurasi WhatsApp Resmi CareWangi:
+  // Masukkan nomor WhatsApp resmi CareWangi (format: '628xxxxxxxxxx') di sini saat nomor telah aktif.
+  // Jika nomor belum tersedia, jangan mengarang nomor. Tautan default akan mengarahkan ke wa.me dengan pesan siap kirim.
+  const CAREWANGI_WA = {
+    phoneNumber: '', // Masukkan nomor resmi saat tersedia (contoh: '6281234567890')
+    defaultMessage: 'Halo CareWangi, saya ingin mengetahui informasi mengenai layanan kunjungan dokter dan perawat ke rumah.'
+  };
+
+  const waButtons = document.querySelectorAll('.floating-wa');
+  if (waButtons.length) {
+    const encodedText = encodeURIComponent(CAREWANGI_WA.defaultMessage);
+    const waHref = CAREWANGI_WA.phoneNumber.trim()
+      ? `https://wa.me/${CAREWANGI_WA.phoneNumber.trim()}?text=${encodedText}`
+      : `https://wa.me/?text=${encodedText}`;
+
+    waButtons.forEach((btn) => {
+      btn.setAttribute('href', waHref);
+    });
+  }
 });

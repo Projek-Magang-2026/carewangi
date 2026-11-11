@@ -571,7 +571,94 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 .js .reveal.is-in { opacity: 1; transform: none; }
 
 /* --------------------------------------------------------------------------
-   19. RESPONSIVE
+   19. FLOATING WHATSAPP BUTTON WITH GREEN GLOW EFFECT
+   -------------------------------------------------------------------------- */
+.floating-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(10, 46, 39, 0.18),
+              0 0 16px rgba(37, 211, 102, 0.4);
+  animation: waGlowPulse 3.2s ease-in-out infinite;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.floating-wa::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 211, 102, 0.45) 0%, rgba(37, 211, 102, 0) 72%);
+  z-index: -1;
+  pointer-events: none;
+  animation: waAuraPulse 3.2s ease-in-out infinite;
+}
+
+.floating-wa svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-wa:hover {
+  background-color: #20BA5A;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 24px rgba(10, 46, 39, 0.24),
+              0 0 30px rgba(37, 211, 102, 0.75);
+}
+
+.floating-wa:hover svg {
+  transform: scale(1.05);
+}
+
+.floating-wa:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.floating-wa:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 4px;
+}
+
+@keyframes waGlowPulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(10, 46, 39, 0.18),
+                0 0 14px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 18px rgba(10, 46, 39, 0.22),
+                0 0 28px rgba(37, 211, 102, 0.7);
+  }
+}
+
+@keyframes waAuraPulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.95;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   20. RESPONSIVE
    -------------------------------------------------------------------------- */
 @media (max-width: 1080px) {
   .hero-grid, .about-grid, .detail-grid, .region-grid, .contact-grid, .adv-grid { gap: var(--s8); }
@@ -677,9 +764,21 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 
   .footer-grid { grid-template-columns: 1fr; gap: var(--s6); }
   .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+  .floating-wa {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+  .floating-wa svg {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
+  .floating-wa, .floating-wa::before { animation: none !important; }
 }
