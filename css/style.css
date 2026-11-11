@@ -402,23 +402,112 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 .note-item.alert { border-top-color: #B8862B; }
 
 /* --------------------------------------------------------------------------
-   14. HALAMAN CARA KERJA
+   14. HALAMAN CARA KERJA (Dua Kolom + Sticky Guide Card)
    -------------------------------------------------------------------------- */
-.timeline { max-width: 880px; }
-.t-step { display: grid; grid-template-columns: 112px 1fr; gap: var(--s4); padding: var(--s5) 0; border-top: 1px solid var(--line); }
+.workflow-layout {
+  display: grid;
+  grid-template-columns: 1.32fr 0.92fr;
+  gap: var(--s8);
+}
+.workflow-main { min-width: 0; }
+.workflow-main .timeline { max-width: 100%; }
+
+.t-step { display: grid; grid-template-columns: 96px 1fr; gap: var(--s4); padding: var(--s5) 0; border-top: 1px solid var(--line); }
 .t-step:last-child { border-bottom: 1px solid var(--line); }
-.t-no { font-size: 3.5rem; font-weight: 600; line-height: 1; letter-spacing: -0.04em; color: var(--teal); font-variant-numeric: tabular-nums; }
-.t-step h3 { font-size: 1.5rem; margin-bottom: var(--s1); }
-.t-step p { color: var(--ink-muted); max-width: 560px; }
-.t-hint { margin-top: var(--s2); padding-left: var(--s2); border-left: 2px solid var(--sage); font-size: 0.9375rem; color: var(--ink-light); max-width: 560px; }
+.t-no { font-size: 3.25rem; font-weight: 600; line-height: 1; letter-spacing: -0.04em; color: var(--teal); font-variant-numeric: tabular-nums; }
+.t-step h3 { font-size: 1.375rem; margin-bottom: var(--s1); color: var(--ink); }
+.t-step p { color: var(--ink-muted); max-width: 540px; }
+.t-hint { margin-top: var(--s2); padding-left: var(--s2); border-left: 2px solid var(--sage); font-size: 0.9375rem; color: var(--ink-light); max-width: 540px; }
 
 .notice {
   display: flex; gap: var(--s2); align-items: flex-start; margin-top: var(--s6);
   padding: var(--s3); background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: var(--r-md);
-  color: var(--warn-ink); font-size: 0.9375rem; line-height: 1.65; max-width: 880px;
+  color: var(--warn-ink); font-size: 0.9375rem; line-height: 1.65; max-width: 100%;
 }
 .notice svg { flex-shrink: 0; margin-top: 4px; }
 .notice strong { display: block; margin-bottom: 2px; color: var(--warn-ink); }
+
+/* Kolom Kanan: Sticky Guide Card */
+.workflow-aside { position: relative; }
+.guide-card {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-md);
+  padding: var(--s5) var(--s4);
+  box-shadow: 0 4px 20px rgba(10, 46, 39, 0.05), 0 1px 3px rgba(10, 46, 39, 0.03);
+}
+.guide-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+.guide-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+}
+.guide-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin-bottom: var(--s4);
+}
+.guide-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  margin-bottom: var(--s4);
+}
+.guide-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding-top: var(--s2);
+  border-top: 1px solid var(--line);
+}
+.guide-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+.guide-num {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: 0.04em;
+  padding-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+.guide-item-title {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.guide-item-text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  margin: 0;
+}
+.guide-note {
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--ink-light);
+  margin: 0;
+}
 
 /* --------------------------------------------------------------------------
    15. HALAMAN TENTANG KAMI
@@ -710,6 +799,10 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .detail { padding: var(--s8) 0; }
   .notes-grid, .pillars { grid-template-columns: 1fr; gap: var(--s4); }
 
+  .workflow-layout { grid-template-columns: 1fr; gap: var(--s6); }
+  .workflow-aside { position: static; }
+  .guide-card { position: static; top: auto; margin-top: var(--s2); }
+
   .cta-editorial { padding: var(--s8) var(--s6); }
   .page-hero { padding: var(--s6) 0 var(--s5); }
   .page-hero-aside { justify-self: start; margin-top: var(--s2); }
@@ -780,6 +873,7 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .t-step { grid-template-columns: 56px 1fr; gap: var(--s2); padding: var(--s4) 0; }
   .t-no { font-size: 2rem; }
   .t-step h3 { font-size: 1.25rem; }
+  .guide-card { padding: var(--s4) var(--s3); }
 
   .cta-editorial { padding: var(--s6) var(--s4); border-radius: var(--r-lg); }
   .cta-editorial-title { font-size: 1.75rem; }
