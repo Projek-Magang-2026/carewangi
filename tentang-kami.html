@@ -4,19 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tentang Kami — CareWangi Banyuwangi</title>
-  <meta name="description" content="Mengenal latar belakang, profil, dan komitmen CareWangi dalam menyajikan informasi layanan kesehatan panggilan ke rumah di Kabupaten Banyuwangi.">
+  <meta name="description" content="Mengenal latar belakang dan tujuan CareWangi dalam menyajikan informasi layanan kesehatan panggilan ke rumah di Kabupaten Banyuwangi.">
   <meta name="theme-color" content="#0D5043">
   <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="tentang-kami">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-  <!-- =========================================================================
-       NAVBAR
-       ========================================================================= -->
   <header class="site-header" id="nav">
     <div class="site-container nav-container">
       <a href="index.html" class="brand-logo" aria-label="CareWangi Beranda">
@@ -39,11 +38,11 @@
           <li><a href="index.html" class="nav-link">Beranda</a></li>
           <li><a href="layanan.html" class="nav-link">Layanan</a></li>
           <li><a href="cara-kerja.html" class="nav-link">Cara Kerja</a></li>
-          <li><a href="tentang-kami.html" class="nav-link active">Tentang Kami</a></li>
+          <li><a href="tentang-kami.html" class="nav-link active" aria-current="page">Tentang Kami</a></li>
           <li><a href="kontak.html" class="nav-link">Kontak</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="kontak.html" class="btn btn-primary btn-sm">Konsultasi Sekarang</a>
+          <a href="kontak.html" class="btn btn-primary btn-sm">Hubungi Kami</a>
         </div>
       </nav>
     </div>
@@ -51,154 +50,105 @@
 
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
-  <main>
-    <!-- =========================================================================
-         A. PAGE HEADER
-         ========================================================================= -->
-    <header class="page-header">
-      <div class="site-container page-header-content">
-        <span class="page-category">Profil &amp; Dedikasi</span>
-        <h1 class="page-title">Mengenal Lebih Dekat CareWangi.</h1>
-        <p class="page-desc">
-          Platform informasi layanan kesehatan panggilan ke rumah yang berfokus mendampingi kebutuhan masyarakat Kabupaten Banyuwangi, Jawa Timur.
-        </p>
+  <main id="main">
+
+    <header class="page-hero">
+      <div class="site-container page-hero-grid">
+        <div>
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span aria-hidden="true">/</span><span>Tentang Kami</span></nav>
+          <h1>Mendekatkan Informasi Kesehatan kepada Keluarga Banyuwangi.</h1>
+          <p class="lead">CareWangi adalah platform informasi layanan kesehatan panggilan ke rumah yang berfokus pada masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
+        </div>
       </div>
     </header>
 
-    <!-- =========================================================================
-         B. PROFIL & C. TUJUAN CAREWANGI
-         ========================================================================= -->
-    <section class="section">
-      <div class="site-container about-hero-grid">
-        <div class="about-hero-text">
-          <span class="section-tag">Latar Belakang Inisiatif</span>
-          <p class="lead">
-            CareWangi merupakan platform informasi layanan kesehatan panggilan ke rumah yang berfokus pada masyarakat Kabupaten Banyuwangi.
-          </p>
-          <p>
-            Banyuwangi adalah kabupaten terluas di Pulau Jawa dengan wilayah geografis yang membentang dari kawasan pesisir pantai hingga lereng pegunungan. Kondisi ini membuat akses fisik menuju pusat layanan kesehatan kerap menjadi hambatan, khususnya bagi warga yang sedang sakit berat, pasien lansia, atau individu yang memerlukan perawatan tirah baring berkelanjutan.
-          </p>
-          <p>
-            Tujuan utama CareWangi adalah membantu masyarakat memperoleh informasi layanan kesehatan secara lebih mudah dan dekat. Kami ingin menjembatani kebutuhan keluarga dengan tenaga medis yang siap berkunjung ke kediaman pasien, sehingga perawatan esensial tetap dapat terlaksana tanpa harus memaksakan mobilitas fisik yang melelahkan.
-          </p>
+    <section class="section" aria-labelledby="latar-title">
+      <div class="site-container about-grid">
+        <div class="prose reveal">
+          <span class="eyebrow">Latar Belakang</span>
+          <h2 id="latar-title" style="margin-bottom:var(--s3)">Mengapa CareWangi Hadir</h2>
+          <p class="big">Tidak semua orang dapat dengan mudah mendatangi fasilitas kesehatan.</p>
+          <p>Banyuwangi adalah kabupaten terluas di Pulau Jawa dengan wilayah yang membentang dari pesisir pantai hingga lereng pegunungan. Kondisi ini membuat akses menuju fasilitas kesehatan kerap menjadi tantangan, khususnya bagi lansia, keluarga dalam masa pemulihan, atau mereka yang memiliki keterbatasan gerak.</p>
+          <p>Tujuan CareWangi adalah membantu masyarakat memperoleh informasi layanan kesehatan secara lebih mudah dan dekat, sehingga keluarga dapat mengenal layanan kunjungan dokter dan perawat serta mengomunikasikan kebutuhan dari rumah.</p>
         </div>
-        <div>
-          <img src="assets/images/tentang-kami.jpg" alt="Tenaga kesehatan memberikan pendampingan dengan penuh empati kepada pasien di rumah" class="about-media-img" width="1000" height="667" loading="lazy">
-        </div>
+        <img src="assets/images/layanan-dokter.jpg" alt="Tenaga kesehatan tersenyum ramah dengan stetoskop" class="about-photo reveal" width="1000" height="1250" loading="lazy">
       </div>
     </section>
 
-    <!-- =========================================================================
-         D. NILAI & PRINSIP LAYANAN
-         ========================================================================= -->
-    <section class="section section-soft">
+    <section class="section section-sage" aria-labelledby="prinsip-title">
       <div class="site-container">
-        <div class="section-header">
-          <span class="section-tag">Prinsip Kami</span>
-          <h2 class="section-title">Nilai yang Menjadi Landasan CareWangi</h2>
-          <p class="section-lead">
-            Komitmen kami dalam menyajikan informasi kesehatan yang bertanggung jawab dan berpusat pada kenyamanan pasien.
-          </p>
-        </div>
-
-        <div class="about-pillars-grid">
-          <article class="about-pillar-card">
-            <h3>Pelayanan Humanis</h3>
-            <p>
-              Menempatkan empati, kesabaran, dan kenyamanan psikologis pasien serta keluarga sebagai prioritas utama dalam setiap proses informasi dan interaksi medis.
-            </p>
-          </article>
-
-          <article class="about-pillar-card">
-            <h3>Aksesibilitas Setara</h3>
-            <p>
-              Membantu meruntuhkan kendala mobilitas fisik agar pasien yang sulit bepergian tetap berkesempatan memperoleh pemeriksaan berkala dari tenaga medis.
-            </p>
-          </article>
-
-          <article class="about-pillar-card">
-            <h3>Keterbukaan Informasi</h3>
-            <p>
-              Menyampaikan alur komunikasi dan batasan layanan dengan jujur, transparan, serta menggunakan bahasa sederhana yang mudah dimengerti oleh semua kalangan masyarakat.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         E. WILAYAH LAYANAN
-         ========================================================================= -->
-    <section class="section" id="wilayah">
-      <div class="site-container about-region-grid">
-        <div class="about-map-box">
-          <img src="assets/images/map-banyuwangi.svg" alt="Peta cakupan wilayah layanan CareWangi di Kabupaten Banyuwangi" width="680" height="500" loading="lazy">
-        </div>
-        <div class="about-region-text">
-          <span class="section-tag">Cakupan Wilayah</span>
-          <h3>Fokus Operasional di Kabupaten Banyuwangi</h3>
-          <p>
-            Saat ini CareWangi berfokus penuh melayani informasi kesehatan untuk wilayah <strong>Kabupaten Banyuwangi, Jawa Timur</strong>. Kami menyelaraskan jejaring tenaga medis di area-area strategis seperti Banyuwangi Kota, Giri, Glagah, Kabat, Rogojampi, Genteng, Srono, Muncar, dan sekitarnya sesuai ketersediaan jadwal.
-          </p>
-          <p>
-            Keputusan memusatkan layanan di Banyuwangi diambil agar kualitas komunikasi, kecepatan koordinasi, dan pemahaman terhadap kebutuhan masyarakat lokal dapat terjaga secara optimal.
-          </p>
-          <div style="margin: 20px 0;">
-            <div class="region-notice-pill">
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
-              </svg>
-              <span>Wilayah di luar Kabupaten Banyuwangi belum termasuk dalam cakupan layanan saat ini.</span>
-            </div>
-          </div>
+        <div class="section-head reveal">
           <div>
-            <a href="kontak.html" class="btn btn-outline btn-sm">Tanyakan Cakupan di Kecamatan Anda</a>
+            <span class="eyebrow">Tujuan Platform</span>
+            <h2 id="prinsip-title">Prinsip dalam Menyampaikan Informasi</h2>
+          </div>
+          <p>Cara CareWangi berupaya menyajikan informasi kepada masyarakat.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar reveal">
+            <h3>Humanis</h3>
+            <p>Menempatkan empati, kesabaran, dan kenyamanan pasien serta keluarga sebagai perhatian utama dalam setiap informasi.</p>
+          </div>
+          <div class="pillar reveal">
+            <h3>Mudah Diakses</h3>
+            <p>Membantu masyarakat yang kesulitan bepergian agar tetap dapat mengenal layanan kesehatan di rumah.</p>
+          </div>
+          <div class="pillar reveal">
+            <h3>Terbuka dan Jelas</h3>
+            <p>Menyampaikan alur komunikasi dan batasan layanan dengan jujur, menggunakan bahasa sederhana.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         F. CTA PENUTUP
-         ========================================================================= -->
-    <section class="section section-soft">
-      <div class="site-container">
-        <div class="home-banner-cta">
-          <div class="home-banner-text">
-            <h3>Ingin Mengenal Layanan yang Tersedia?</h3>
-            <p>Pelajari rincian kunjungan dokter dan perawat atau hubungi kami untuk informasi lebih lanjut.</p>
+    <section class="section" id="wilayah" aria-labelledby="wilayah-title">
+      <div class="site-container region-grid">
+        <div class="map-box reveal">
+          <img src="assets/images/map-banyuwangi.svg" alt="Peta wilayah fokus layanan CareWangi di Kabupaten Banyuwangi" width="680" height="500" loading="lazy">
+        </div>
+        <div class="region-text reveal">
+          <span class="eyebrow">Fokus Wilayah</span>
+          <h2 id="wilayah-title">Kabupaten Banyuwangi, Jawa Timur</h2>
+          <p>Saat ini CareWangi berfokus menyajikan informasi layanan kesehatan untuk wilayah <strong>Kabupaten Banyuwangi, Jawa Timur</strong>. Fokus ini dipilih agar komunikasi dan pemahaman terhadap kebutuhan masyarakat setempat dapat terjaga.</p>
+          <div class="notice" style="margin-top:var(--s3)">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>
+            <p>Wilayah di luar Kabupaten Banyuwangi belum termasuk dalam cakupan informasi layanan saat ini.</p>
           </div>
-          <div class="hero-home-actions">
-            <a href="layanan.html" class="btn btn-outline">Lihat Layanan</a>
-            <a href="kontak.html" class="btn btn-primary">Hubungi Kami</a>
+          <a href="kontak.html" class="btn btn-outline btn-sm"><span>Tanyakan cakupan di kecamatan Anda</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="site-container">
+        <div class="cta-block reveal">
+          <div>
+            <h2 id="cta-title">Ingin Mengenal Layanan yang Tersedia?</h2>
+            <p>Pelajari informasi kunjungan dokter dan perawat, atau hubungi CareWangi untuk informasi lebih lanjut.</p>
+          </div>
+          <div class="cta-side">
+            <a href="kontak.html" class="btn btn-light btn-lg">Hubungi Kami</a>
+            <small>Layanan informasi untuk wilayah Kabupaten Banyuwangi, Jawa Timur.</small>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
   <footer class="site-footer">
     <div class="site-container footer-grid">
       <div>
         <a href="index.html" class="footer-logo">
-          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="32" height="32" rx="6" fill="#146050"/>
             <path d="M16 8v16M8 16h16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          Care<span>Wangi</span>
+          </svg><span class="footer-logo-text"><span style="color:#fff;font-weight:700">Care</span><span>Wangi</span></span>
         </a>
-        <p class="footer-desc">
-          Platform informasi layanan kunjungan tenaga medis dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.
-        </p>
-        <span class="footer-region">Kabupaten Banyuwangi, Jawa Timur</span>
+        <p class="footer-desc">Platform informasi layanan kunjungan dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
       </div>
 
       <div>
-        <h4 class="footer-heading">Halaman Utama</h4>
+        <h4 class="footer-heading">Halaman</h4>
         <ul class="footer-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="layanan.html">Layanan</a></li>
@@ -209,29 +159,30 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Layanan Informasi</h4>
+        <h4 class="footer-heading">Informasi Layanan</h4>
         <ul class="footer-links">
           <li><a href="layanan.html#dokter">Kunjungan Dokter</a></li>
           <li><a href="layanan.html#perawat">Kunjungan Perawat</a></li>
           <li><a href="cara-kerja.html">Alur Komunikasi</a></li>
-          <li><a href="#wilayah">Cakupan Wilayah</a></li>
+          <li><a href="tentang-kami.html#wilayah">Cakupan Wilayah</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="footer-heading">Hubungi Kami</h4>
+        <h4 class="footer-heading">Kontak</h4>
         <ul class="footer-links">
-          <li><a href="kontak.html">Informasi Kontak</a></li>
-          <li><a href="kontak.html#form">Kirim Pesan</a></li>
-          <li><a href="layanan.html">Pilihan Layanan</a></li>
+          <li><a href="kontak.html">Halaman Kontak</a></li>
+          <li><a href="kontak.html#form">Formulir Pesan</a></li>
+          <li><a href="kontak.html#faq">Pertanyaan Umum</a></li>
         </ul>
+        <p class="footer-note">Kabupaten Banyuwangi, Jawa Timur.<br>Nomor telepon, email, dan alamat akan dicantumkan setelah tersedia.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="site-container footer-bottom-inner">
         <p>© 2026 CareWangi. Seluruh hak cipta dilindungi.</p>
-        <p>Platform Informasi Layanan Kesehatan Panggilan ke Rumah — Kabupaten Banyuwangi.</p>
+        <p>Platform informasi layanan kesehatan panggilan ke rumah, Kabupaten Banyuwangi.</p>
       </div>
     </div>
   </footer>

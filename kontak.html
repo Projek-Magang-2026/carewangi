@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontak Kami — CareWangi Banyuwangi</title>
-  <meta name="description" content="Hubungi CareWangi untuk mendapatkan informasi lengkap mengenai layanan kunjungan dokter dan perawat ke rumah di wilayah Kabupaten Banyuwangi.">
+  <title>Kontak — CareWangi Banyuwangi</title>
+  <meta name="description" content="Hubungi CareWangi untuk mendapatkan informasi mengenai layanan kunjungan dokter dan perawat ke rumah di wilayah Kabupaten Banyuwangi.">
   <meta name="theme-color" content="#0D5043">
   <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="kontak">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-  <!-- =========================================================================
-       NAVBAR
-       ========================================================================= -->
   <header class="site-header" id="nav">
     <div class="site-container nav-container">
       <a href="index.html" class="brand-logo" aria-label="CareWangi Beranda">
@@ -40,10 +39,10 @@
           <li><a href="layanan.html" class="nav-link">Layanan</a></li>
           <li><a href="cara-kerja.html" class="nav-link">Cara Kerja</a></li>
           <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
-          <li><a href="kontak.html" class="nav-link active">Kontak</a></li>
+          <li><a href="kontak.html" class="nav-link active" aria-current="page">Kontak</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="kontak.html" class="btn btn-primary btn-sm">Konsultasi Sekarang</a>
+          <a href="kontak.html" class="btn btn-primary btn-sm">Hubungi Kami</a>
         </div>
       </nav>
     </div>
@@ -51,100 +50,74 @@
 
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
-  <main>
-    <!-- =========================================================================
-         A. PAGE HEADER
-         ========================================================================= -->
-    <header class="page-header">
-      <div class="site-container page-header-content">
-        <span class="page-category">Pusat Komunikasi</span>
-        <h1 class="page-title">Hubungi CareWangi.</h1>
-        <p class="page-desc">
-          Kami siap membantu Anda mendapatkan informasi mengenai layanan kesehatan ke rumah khusus untuk wilayah Kabupaten Banyuwangi.
-        </p>
+  <main id="main">
+
+    <header class="page-hero">
+      <div class="site-container page-hero-grid">
+        <div>
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span aria-hidden="true">/</span><span>Kontak</span></nav>
+          <h1>Hubungi CareWangi.</h1>
+          <p class="lead">Kami siap membantu Anda mendapatkan informasi mengenai layanan kesehatan ke rumah, khusus untuk wilayah Kabupaten Banyuwangi.</p>
+        </div>
       </div>
     </header>
 
-    <!-- =========================================================================
-         B. INFORMASI KONTAK & C. FORMULIR KONTAK
-         ========================================================================= -->
-    <section class="section">
-      <div class="site-container contact-page-grid">
-        <!-- Saluran Kontak Resmi -->
-        <div>
-          <div class="section-header" style="margin-bottom: 28px;">
-            <span class="section-tag">Saluran Informasi Resmi</span>
-            <h2 class="section-title">Kanal Komunikasi CareWangi</h2>
-            <p class="section-lead">
-              Gunakan salah satu kontak resmi di bawah ini untuk berkonsultasi mengenai kebutuhan keluarga Anda.
-            </p>
+    <section class="section" aria-labelledby="kanal-title">
+      <div class="site-container contact-grid">
+        <div class="contact-info reveal">
+          <span class="eyebrow">Informasi Kontak</span>
+          <h2 id="kanal-title">Kanal Komunikasi CareWangi</h2>
+          <p>Kanal kontak resmi akan dicantumkan di sini setelah tersedia. Sementara itu, Anda dapat menyampaikan kebutuhan melalui formulir.</p>
+
+          <div class="channels">
+            <div class="channel">
+              <span class="channel-tag">Telepon / WhatsApp</span>
+              <div class="channel-val">Belum tersedia</div>
+              <p class="channel-desc">Akan ditambahkan.</p>
+            </div>
+            <div class="channel">
+              <span class="channel-tag">Email</span>
+              <div class="channel-val">Belum tersedia</div>
+              <p class="channel-desc">Akan ditambahkan.</p>
+            </div>
+            <div class="channel">
+              <span class="channel-tag">Alamat</span>
+              <div class="channel-val">Belum tersedia</div>
+              <p class="channel-desc">Akan ditambahkan.</p>
+            </div>
+            <div class="channel">
+              <span class="channel-tag">Area Fokus Layanan</span>
+              <div class="channel-val is-set">Kabupaten Banyuwangi, Jawa Timur</div>
+              <p class="channel-desc">Permintaan informasi di luar kabupaten ini belum dapat diproses saat ini.</p>
+            </div>
           </div>
 
-          <div class="contact-channels-box">
-            <article class="contact-channel-item">
-              <span class="channel-tag">Telepon / WhatsApp Resmi</span>
-              <div class="channel-val">[Nomor akan ditambahkan]</div>
-              <p class="channel-desc">
-                Konsultasi kebutuhan kunjungan tenaga medis dan konfirmasi jadwal operasional.
-              </p>
-            </article>
-
-            <article class="contact-channel-item">
-              <span class="channel-tag">Surat Elektronik (Email)</span>
-              <div class="channel-val">[Email akan ditambahkan]</div>
-              <p class="channel-desc">
-                Pertanyaan umum, koordinasi informasi resmi, dan korespondensi kemitraan.
-              </p>
-            </article>
-
-            <article class="contact-channel-item">
-              <span class="channel-tag">Alamat Informasi</span>
-              <div class="channel-val">[Alamat akan ditambahkan]</div>
-              <p class="channel-desc">
-                Kabupaten Banyuwangi, Jawa Timur.
-              </p>
-            </article>
-
-            <article class="contact-channel-item">
-              <span class="channel-tag">Media Sosial Resmi</span>
-              <div class="channel-val">[Akun akan ditambahkan]</div>
-              <p class="channel-desc">
-                Informasi edukasi kesehatan dan pembaruan kegiatan pelayanan masyarakat.
-              </p>
-            </article>
-          </div>
-
-          <!-- D. Wilayah Layanan Notice -->
-          <div class="steps-notice-card" style="margin-top: 28px;">
-            <strong>Fokus Wilayah Layanan</strong>
-            <p>
-              CareWangi melayani informasi kesehatan khusus untuk wilayah administratif <strong>Kabupaten Banyuwangi, Jawa Timur</strong>. Permintaan informasi di luar batas kabupaten ini belum dapat kami proses saat ini.
-            </p>
+          <div class="notice">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>
+            <p><strong>Kondisi darurat</strong>Layanan ini bukan untuk kegawatdaruratan. Hubungi ambulans atau IGD terdekat bila terjadi kondisi kritis.</p>
           </div>
         </div>
 
-        <!-- C. Formulir Kontak Frontend -->
-        <div class="contact-form-box" id="form">
-          <h3>Sampaikan Kebutuhan Informasi</h3>
-          <p>
-            Isi formulir ringkas di bawah ini. Tim kami akan menindaklanjuti pesan Anda sesuai ketersediaan jam layanan informasi.
-          </p>
+        <div class="form-box reveal" id="form">
+          <h2>Sampaikan Kebutuhan Informasi</h2>
+          <p>Isi formulir ringkas berikut untuk menuliskan kebutuhan Anda.</p>
+          <div class="form-state"><strong>Status formulir:</strong> tampilan antarmuka saja. Formulir ini belum terhubung ke sistem pengiriman, sehingga pesan belum benar-benar terkirim.</div>
 
           <form id="contactForm" novalidate>
             <div class="form-group">
               <label for="fullName" class="form-label">Nama Lengkap</label>
-              <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Contoh: Budi Santoso" required>
+              <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Contoh: Budi Santoso" autocomplete="name" required>
             </div>
 
             <div class="form-group">
               <label for="phone" class="form-label">Nomor WhatsApp / Telepon</label>
-              <input type="tel" id="phone" name="phone" class="form-input" placeholder="Contoh: 081234567890" required>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="Contoh: 081234567890" autocomplete="tel" required>
             </div>
 
             <div class="form-group">
               <label for="district" class="form-label">Kecamatan Domisili di Banyuwangi</label>
               <select id="district" name="district" class="form-select" required>
-                <option value="">-- Pilih Kecamatan di Banyuwangi --</option>
+                <option value="">Pilih kecamatan</option>
                 <option value="Banyuwangi Kota">Banyuwangi Kota</option>
                 <option value="Giri">Giri</option>
                 <option value="Glagah">Glagah</option>
@@ -155,14 +128,14 @@
                 <option value="Srono">Srono</option>
                 <option value="Muncar">Muncar</option>
                 <option value="Cluring">Cluring</option>
-                <option value="Lainnya di Banyuwangi">Kecamatan Lainnya di Banyuwangi</option>
+                <option value="Lainnya di Banyuwangi">Kecamatan lainnya di Banyuwangi</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="serviceType" class="form-label">Layanan yang Ingin Dikonsultasikan</label>
               <select id="serviceType" name="serviceType" class="form-select" required>
-                <option value="">-- Pilih Jenis Layanan --</option>
+                <option value="">Pilih jenis layanan</option>
                 <option value="Kunjungan Dokter">Kunjungan Dokter ke Rumah</option>
                 <option value="Kunjungan Perawat">Kunjungan Perawat ke Rumah</option>
                 <option value="Informasi Umum">Informasi &amp; Tanya Jawab Umum</option>
@@ -170,89 +143,51 @@
             </div>
 
             <div class="form-group">
-              <label for="message" class="form-label">Ringkasan Kebutuhan atau Keluhan</label>
+              <label for="message" class="form-label">Ringkasan Kebutuhan</label>
               <textarea id="message" name="message" class="form-textarea" placeholder="Tuliskan secara singkat kondisi pasien dan kebutuhan kunjungan..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary form-submit-btn">
-              Kirim Pertanyaan Informasi
-            </button>
+            <button type="submit" class="btn btn-primary form-submit-btn">Periksa Formulir</button>
 
-            <div class="form-feedback success" id="formSuccess">
-              Terima kasih. Pesan Anda telah tercatat pada formulir informasi CareWangi. Tim kami akan segera meninjau kebutuhan Anda.
-            </div>
+            <div class="form-feedback" id="formSuccess" role="status" aria-live="polite"></div>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         E. FAQ SINGKAT DI HALAMAN KONTAK
-         ========================================================================= -->
-    <section class="section section-soft" id="faq">
-      <div class="site-container site-narrow">
-        <div class="section-header text-center">
-          <span class="section-tag">Pertanyaan Umum</span>
-          <h2 class="section-title">Informasi Seputar Layanan &amp; Respon</h2>
-          <p class="section-lead">
-            Hal yang paling sering ditanyakan saat masyarakat menghubungi CareWangi.
-          </p>
+    <section class="section section-sage" id="faq" aria-labelledby="faq-title">
+      <div class="site-container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Pertanyaan Umum</span>
+            <h2 id="faq-title">Seputar Layanan dan Respon</h2>
+          </div>
+          <p>Hal yang paling sering ditanyakan saat masyarakat menghubungi CareWangi.</p>
         </div>
-
-        <div class="home-reasons-list">
-          <div class="home-reason-item">
-            <h3 class="home-reason-title">Berapa lama respon komunikasi?</h3>
-            <p class="home-reason-desc">
-              Tim CareWangi berupaya merespons pertanyaan yang masuk dalam waktu operasional harian sesegera mungkin sesuai urutan komunikasi.
-            </p>
-          </div>
-
-          <div class="home-reason-item">
-            <h3 class="home-reason-title">Apakah langsung ada dokter yang datang?</h3>
-            <p class="home-reason-desc">
-              Kunjungan disesuaikan dengan konfirmasi keluhan klinis, jadwal dokter, serta jarak tempuh ke domisili Anda di Banyuwangi.
-            </p>
-          </div>
-
-          <div class="home-reason-item">
-            <h3 class="home-reason-title">Apakah ada batasan wilayah tertentu?</h3>
-            <p class="home-reason-desc">
-              Ya, saat ini jangkauan koordinasi hanya berlaku untuk wilayah administratif Kabupaten Banyuwangi, Jawa Timur.
-            </p>
-          </div>
-
-          <div class="home-reason-item">
-            <h3 class="home-reason-title">Apakah bisa untuk kondisi gawat darurat?</h3>
-            <p class="home-reason-desc">
-              Tidak. Layanan kunjungan rumah difokuskan pada kondisi stabil non-darurat. Bila terjadi kegawatan kritis, segera hubungi ambulans atau IGD terdekat.
-            </p>
-          </div>
+        <div class="faq-list">
+        <div class="faq-item reveal"><h3>Berapa lama respon komunikasi?</h3><p>Tim CareWangi berupaya merespons pertanyaan yang masuk dalam waktu operasional harian sesegera mungkin sesuai urutan komunikasi.</p></div>
+        <div class="faq-item reveal"><h3>Apakah langsung ada dokter yang datang?</h3><p>Kunjungan disesuaikan dengan konfirmasi keluhan, jadwal dokter, serta jarak tempuh ke domisili Anda di Banyuwangi.</p></div>
+        <div class="faq-item reveal"><h3>Apakah ada batasan wilayah tertentu?</h3><p>Ya, saat ini jangkauan koordinasi hanya berlaku untuk wilayah administratif Kabupaten Banyuwangi, Jawa Timur.</p></div>
+        <div class="faq-item reveal"><h3>Apakah bisa untuk kondisi gawat darurat?</h3><p>Tidak. Layanan kunjungan rumah difokuskan pada kondisi stabil non-darurat. Bila terjadi kegawatan kritis, segera hubungi ambulans atau IGD terdekat.</p></div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
   <footer class="site-footer">
     <div class="site-container footer-grid">
       <div>
         <a href="index.html" class="footer-logo">
-          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="32" height="32" rx="6" fill="#146050"/>
             <path d="M16 8v16M8 16h16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          Care<span>Wangi</span>
+          </svg><span class="footer-logo-text"><span style="color:#fff;font-weight:700">Care</span><span>Wangi</span></span>
         </a>
-        <p class="footer-desc">
-          Platform informasi layanan kunjungan tenaga medis dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.
-        </p>
-        <span class="footer-region">Kabupaten Banyuwangi, Jawa Timur</span>
+        <p class="footer-desc">Platform informasi layanan kunjungan dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
       </div>
 
       <div>
-        <h4 class="footer-heading">Halaman Utama</h4>
+        <h4 class="footer-heading">Halaman</h4>
         <ul class="footer-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="layanan.html">Layanan</a></li>
@@ -263,7 +198,7 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Layanan Informasi</h4>
+        <h4 class="footer-heading">Informasi Layanan</h4>
         <ul class="footer-links">
           <li><a href="layanan.html#dokter">Kunjungan Dokter</a></li>
           <li><a href="layanan.html#perawat">Kunjungan Perawat</a></li>
@@ -273,19 +208,20 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Hubungi Kami</h4>
+        <h4 class="footer-heading">Kontak</h4>
         <ul class="footer-links">
-          <li><a href="kontak.html">Informasi Kontak</a></li>
-          <li><a href="kontak.html#form">Kirim Pesan</a></li>
-          <li><a href="cara-kerja.html">Panduan Kunjungan</a></li>
+          <li><a href="kontak.html">Halaman Kontak</a></li>
+          <li><a href="kontak.html#form">Formulir Pesan</a></li>
+          <li><a href="kontak.html#faq">Pertanyaan Umum</a></li>
         </ul>
+        <p class="footer-note">Kabupaten Banyuwangi, Jawa Timur.<br>Nomor telepon, email, dan alamat akan dicantumkan setelah tersedia.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="site-container footer-bottom-inner">
         <p>© 2026 CareWangi. Seluruh hak cipta dilindungi.</p>
-        <p>Platform Informasi Layanan Kesehatan Panggilan ke Rumah — Kabupaten Banyuwangi.</p>
+        <p>Platform informasi layanan kesehatan panggilan ke rumah, Kabupaten Banyuwangi.</p>
       </div>
     </div>
   </footer>

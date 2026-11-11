@@ -9,14 +9,13 @@
   <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="beranda">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-  <!-- =========================================================================
-       NAVBAR
-       ========================================================================= -->
   <header class="site-header" id="nav">
     <div class="site-container nav-container">
       <a href="index.html" class="brand-logo" aria-label="CareWangi Beranda">
@@ -36,14 +35,14 @@
 
       <nav class="nav-menu" id="menu" aria-label="Navigasi Utama">
         <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Beranda</a></li>
+          <li><a href="index.html" class="nav-link active" aria-current="page">Beranda</a></li>
           <li><a href="layanan.html" class="nav-link">Layanan</a></li>
           <li><a href="cara-kerja.html" class="nav-link">Cara Kerja</a></li>
           <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
           <li><a href="kontak.html" class="nav-link">Kontak</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="kontak.html" class="btn btn-primary btn-sm">Konsultasi Sekarang</a>
+          <a href="kontak.html" class="btn btn-primary btn-sm">Hubungi Kami</a>
         </div>
       </nav>
     </div>
@@ -51,209 +50,191 @@
 
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
-  <main>
-    <!-- =========================================================================
-         B. HERO SECTION
-         ========================================================================= -->
-    <section class="hero-home">
-      <div class="site-container hero-home-grid">
-        <div class="hero-home-content">
-          <span class="section-tag">Layanan Panggilan ke Rumah</span>
-          <h1 class="hero-home-title">Perawatan Kesehatan Lebih Dekat, Langsung di Rumah Anda.</h1>
-          <p class="hero-home-desc">
-            CareWangi membantu masyarakat mendapatkan informasi layanan kunjungan dokter dan perawat ke rumah, khusus untuk wilayah Kabupaten Banyuwangi.
-          </p>
-          <div class="hero-home-actions">
-            <a href="layanan.html" class="btn btn-primary btn-lg">Jelajahi Layanan</a>
+  <main id="main">
+
+    <!-- SECTION 1 — HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="site-container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Layanan Panggilan ke Rumah</span>
+          <h1 class="hero-title" id="hero-title">Perawatan Kesehatan Lebih Dekat, <span class="hl">Langsung di Rumah Anda.</span></h1>
+          <p class="hero-desc">CareWangi membantu masyarakat mendapatkan informasi layanan kunjungan dokter dan perawat ke rumah, khusus untuk wilayah Kabupaten Banyuwangi.</p>
+          <div class="hero-actions">
+            <a href="layanan.html" class="btn btn-primary btn-lg"><span>Jelajahi Layanan</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
             <a href="kontak.html" class="btn btn-outline btn-lg">Hubungi Kami</a>
           </div>
+          <ul class="hero-facts">
+            <li>Kunjungan Dokter</li>
+            <li>Kunjungan Perawat</li>
+            <li>Kabupaten Banyuwangi</li>
+          </ul>
         </div>
-        <div class="hero-home-media">
-          <img src="assets/images/hero-homecare.jpg" alt="Tenaga kesehatan memberikan pelayanan medis kepada pasien di rumah" class="hero-home-img" width="1200" height="793" fetchpriority="high">
-          <p class="hero-home-caption">
-            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
-              <path d="M8 0a5 5 0 0 0-5 5c0 3.75 5 11 5 11s5-7.25 5-11a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
-            </svg>
-            Fokus pelayanan informasi wilayah Kabupaten Banyuwangi, Jawa Timur
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================================
-         C. PENGENALAN SINGKAT CAREWANGI
-         ========================================================================= -->
-    <section class="section section-soft">
-      <div class="site-container home-intro-grid">
-        <div>
-          <span class="section-tag">Tentang Platform</span>
-          <h2 class="home-intro-lead">Menjembatani Kebutuhan Pelayanan Medis Keluarga Tanpa Kendala Jarak</h2>
-        </div>
-        <div class="home-intro-body">
-          <p>
-            CareWangi hadir atas kesadaran bahwa tidak semua orang dapat dengan mudah mendatangi fasilitas kesehatan fisik. Bagi anggota keluarga yang sedang dalam masa pemulihan, lanjut usia, atau memiliki keterbatasan gerak, perjalanan ke klinik atau rumah sakit sering kali menjadi tantangan tersendiri.
-          </p>
-          <p>
-            Melalui CareWangi, kami menyajikan informasi terpusat mengenai layanan kunjungan dokter dan perawat terpercaya di Kabupaten Banyuwangi, sehingga keluarga dapat berkoordinasi dengan tenang langsung dari tempat tinggal mereka.
-          </p>
-          <p>
-            <a href="tentang-kami.html" class="text-link">
-              <span>Pelajari komitmen dan latar belakang CareWangi</span>
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-              </svg>
-            </a>
-          </p>
+        <div class="hero-media">
+          <img src="assets/images/hero-homecare.jpg" alt="Tenaga kesehatan berbincang hangat dengan seorang pasien lanjut usia" class="hero-photo" width="1200" height="793" fetchpriority="high">
+          <p class="hero-caption"><strong>Fokus wilayah Banyuwangi</strong>Informasi layanan kesehatan untuk keluarga di Kabupaten Banyuwangi, Jawa Timur.</p>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         D. LAYANAN UNGGULAN
-         ========================================================================= -->
-    <section class="section">
+    <!-- SECTION 2 — LAYANAN -->
+    <section class="section section-sage" aria-labelledby="layanan-title">
       <div class="site-container">
-        <div class="section-header text-center">
-          <span class="section-tag">Pilihan Layanan</span>
-          <h2 class="section-title">Layanan Kesehatan untuk Anda dan Keluarga</h2>
-          <p class="section-lead">
-            Informasi layanan kunjungan tenaga kesehatan terarah yang siap mendampingi kebutuhan medis di rumah.
-          </p>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Layanan Utama</span>
+            <h2 id="layanan-title">Layanan Kesehatan untuk Anda dan Keluarga</h2>
+          </div>
+          <p>Informasi layanan kunjungan tenaga kesehatan yang membantu memenuhi kebutuhan perawatan di rumah.</p>
         </div>
 
-        <div class="home-services-grid">
-          <!-- Layanan 1: Kunjungan Dokter -->
-          <article class="home-service-card">
-            <div class="home-service-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
-                <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
-                <circle cx="20" cy="10" r="2"/>
-              </svg>
-            </div>
-            <h3 class="home-service-title">Kunjungan Dokter</h3>
-            <p class="home-service-desc">
-              Informasi layanan kunjungan dokter ke rumah untuk membantu kebutuhan konsultasi medis, pemeriksaan kondisi fisik, evaluasi kesehatan berkala, dan saran perawatan yang jelas.
-            </p>
-            <a href="layanan.html#dokter" class="text-link">
-              <span>Rincian Kunjungan Dokter</span>
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-              </svg>
-            </a>
+        <div class="svc-grid">
+          <article class="svc reveal">
+            <img src="assets/images/tentang-kami.jpg" alt="Dokter berbincang dengan pasien mengenai kondisi kesehatannya" class="svc-photo" width="1000" height="667" loading="lazy">
+            <span class="svc-kicker">Layanan 01</span>
+            <h3>Kunjungan Dokter</h3>
+            <p>Informasi layanan kunjungan dokter ke rumah untuk membantu kebutuhan konsultasi medis, pemeriksaan, dan informasi kesehatan sesuai kebutuhan.</p>
+            <a href="layanan.html#dokter" class="text-link"><span>Lihat rincian kunjungan dokter</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
           </article>
 
-          <!-- Layanan 2: Kunjungan Perawat -->
-          <article class="home-service-card">
-            <div class="home-service-icon">
-              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
-            </div>
-            <h3 class="home-service-title">Kunjungan Perawat</h3>
-            <p class="home-service-desc">
-              Informasi layanan kunjungan perawat ke rumah untuk tindakan keperawatan esensial, perawatan luka higienis, pemantauan tanda vital, dan pendampingan masa pemulihan pasca rawat inap.
-            </p>
-            <a href="layanan.html#perawat" class="text-link">
-              <span>Rincian Kunjungan Perawat</span>
-              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-              </svg>
-            </a>
+          <article class="svc reveal">
+            <img src="assets/images/layanan-perawat.jpg" alt="Perawat bersarung tangan memberikan perawatan kepada pasien" class="svc-photo" width="1000" height="800" loading="lazy">
+            <span class="svc-kicker">Layanan 02</span>
+            <h3>Kunjungan Perawat</h3>
+            <p>Informasi layanan kunjungan perawat ke rumah untuk membantu kebutuhan perawatan dan pendampingan sesuai kebutuhan pasien.</p>
+            <a href="layanan.html#perawat" class="text-link"><span>Lihat rincian kunjungan perawat</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- =========================================================================
-         E. ALASAN MEMILIH CAREWANGI
-         ========================================================================= -->
-    <section class="section section-soft">
-      <div class="site-container">
-        <div class="section-header">
-          <span class="section-tag">Keunggulan</span>
-          <h2 class="section-title">Mengapa Memilih CareWangi?</h2>
-          <p class="section-lead">
-            Pendekatan pelayanan berpusat pada kenyamanan keluarga dengan prinsip kejelasan dan kemudahan akses.
-          </p>
-        </div>
-
-        <div class="home-reasons-list">
-          <div class="home-reason-item">
-            <span class="home-reason-num">01</span>
-            <h3 class="home-reason-title">Lebih Dekat dengan Rumah</h3>
-            <p class="home-reason-desc">
-              Informasi layanan dirancang agar tenaga medis mendatangi kediaman Anda, menjaga kenyamanan pasien tanpa kelelahan perjalanan antrean.
-            </p>
-          </div>
-
-          <div class="home-reason-item">
-            <span class="home-reason-num">02</span>
-            <h3 class="home-reason-title">Membantu Mobilitas Terbatas</h3>
-            <p class="home-reason-desc">
-              Memberikan alternatif praktis bagi lansia atau pasien yang sulit bergerak, memastikan pendampingan medis tetap berjalan berkala.
-            </p>
-          </div>
-
-          <div class="home-reason-item">
-            <span class="home-reason-num">03</span>
-            <h3 class="home-reason-title">Informasi Transparan</h3>
-            <p class="home-reason-desc">
-              Penjelasan alur dan layanan disampaikan dengan bahasa yang lugas, mudah dipahami, tanpa istilah administratif yang membingungkan.
-            </p>
-          </div>
-
-          <div class="home-reason-item">
-            <span class="home-reason-num">04</span>
-            <h3 class="home-reason-title">Fokus Kabupaten Banyuwangi</h3>
-            <p class="home-reason-desc">
-              Seluruh cakupan informasi dan jejaring tenaga kesehatan diselaraskan khusus untuk warga yang berdomisili di Kabupaten Banyuwangi.
-            </p>
-          </div>
+        <div class="svc-more reveal">
+          <p>Pelajari cakupan informasi dan hal penting yang perlu diketahui keluarga.</p>
+          <a href="layanan.html" class="btn btn-outline"><span>Semua Informasi Layanan</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         F. CTA PENUTUP
-         ========================================================================= -->
-    <section class="section">
+    <!-- SECTION 3 — KEUNGGULAN -->
+    <section class="section section-teal" aria-labelledby="unggul-title">
+      <div class="site-container adv-grid">
+        <div class="adv-intro reveal">
+          <span class="eyebrow">Keunggulan CareWangi</span>
+          <h2 id="unggul-title">Mengapa Memilih CareWangi?</h2>
+          <p>Informasi yang disampaikan secara sederhana, agar keluarga dapat memahami layanan dan menyampaikan kebutuhan dengan tenang.</p>
+        </div>
+        <ol class="adv-list reveal">
+          <li>
+            <span class="adv-no">01</span>
+            <div>
+              <h3>Fokus di Kabupaten Banyuwangi</h3>
+              <p>Seluruh informasi layanan disusun khusus untuk masyarakat yang berdomisili di Kabupaten Banyuwangi.</p>
+            </div>
+          </li>
+          <li>
+            <span class="adv-no">02</span>
+            <div>
+              <h3>Informasi yang mudah dipahami</h3>
+              <p>Penjelasan layanan kesehatan disampaikan dengan bahasa yang lugas dan jelas.</p>
+            </div>
+          </li>
+          <li>
+            <span class="adv-no">03</span>
+            <div>
+              <h3>Membantu informasi kunjungan ke rumah</h3>
+              <p>Masyarakat dapat mengenal layanan kunjungan dokter dan perawat sebelum memutuskan langkah berikutnya.</p>
+            </div>
+          </li>
+          <li>
+            <span class="adv-no">04</span>
+            <div>
+              <h3>Komunikasi kebutuhan yang lebih mudah</h3>
+              <p>Kebutuhan layanan dapat disampaikan langsung kepada CareWangi untuk memperoleh informasi lebih lanjut.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — CARA KERJA -->
+    <section class="section" aria-labelledby="alur-title">
       <div class="site-container">
-        <div class="home-banner-cta">
-          <div class="home-banner-text">
-            <h3>Butuh Informasi Layanan Kesehatan ke Rumah?</h3>
-            <p>Konsultasikan kebutuhan Anda atau pelajari alur komunikasi sebelum mengajukan kunjungan.</p>
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Cara Kerja</span>
+            <h2 id="alur-title">Bagaimana Cara Mendapatkan Layanan CareWangi?</h2>
           </div>
-          <div class="hero-home-actions">
-            <a href="cara-kerja.html" class="btn btn-outline">Lihat Cara Kerja</a>
-            <a href="kontak.html" class="btn btn-primary">Hubungi Kami</a>
+          <div class="head-action">
+            <a href="cara-kerja.html" class="text-link"><span>Lihat alur selengkapnya</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-no">01</span>
+            <h3>Kenali Layanan</h3>
+            <p>Pengunjung mempelajari informasi layanan kunjungan dokter dan perawat yang tersedia.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">02</span>
+            <h3>Hubungi CareWangi</h3>
+            <p>Pengunjung menghubungi CareWangi untuk menyampaikan kebutuhan dan meminta informasi lebih lanjut.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">03</span>
+            <h3>Konfirmasi Kebutuhan</h3>
+            <p>Kebutuhan pengunjung dikomunikasikan untuk memperoleh informasi yang sesuai.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-no">04</span>
+            <h3>Informasi Kunjungan</h3>
+            <p>Pengunjung memperoleh informasi lanjutan mengenai kebutuhan kunjungan yang telah dikomunikasikan.</p>
+          </li>
+        </ol>
+        <p class="steps-note">Alur ini merupakan proses komunikasi dan penyampaian informasi, bukan sistem pemesanan otomatis.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — TENTANG CAREWANGI -->
+    <section class="section section-sage" aria-labelledby="tentang-title">
+      <div class="site-container about-grid">
+        <img src="assets/images/layanan-dokter.jpg" alt="Tenaga kesehatan tersenyum ramah dengan stetoskop" class="about-photo reveal" width="1000" height="1250" loading="lazy">
+        <div class="about-text reveal">
+          <span class="eyebrow">Tentang CareWangi</span>
+          <h2 id="tentang-title">Mendekatkan Informasi Kesehatan kepada Keluarga Banyuwangi.</h2>
+          <p>CareWangi hadir untuk membantu masyarakat mendapatkan informasi mengenai layanan kunjungan dokter dan perawat ke rumah. Dengan fokus pada wilayah Kabupaten Banyuwangi, CareWangi ingin mempermudah masyarakat dalam mengenal layanan dan mengomunikasikan kebutuhan perawatan kesehatan di rumah.</p>
+          <a href="tentang-kami.html" class="btn btn-outline"><span>Tentang CareWangi</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="site-container">
+        <div class="cta-block reveal">
+          <div>
+            <h2 id="cta-title">Mulai dengan Mengenal Kebutuhan Kesehatan Anda.</h2>
+            <p>Hubungi CareWangi untuk mendapatkan informasi lebih lanjut mengenai layanan kunjungan kesehatan ke rumah.</p>
+          </div>
+          <div class="cta-side">
+            <a href="kontak.html" class="btn btn-light btn-lg">Hubungi Kami</a>
+            <small>Layanan informasi untuk wilayah Kabupaten Banyuwangi, Jawa Timur.</small>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
   <footer class="site-footer">
     <div class="site-container footer-grid">
       <div>
         <a href="index.html" class="footer-logo">
-          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="32" height="32" rx="6" fill="#146050"/>
             <path d="M16 8v16M8 16h16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          Care<span>Wangi</span>
+          </svg><span class="footer-logo-text"><span style="color:#fff;font-weight:700">Care</span><span>Wangi</span></span>
         </a>
-        <p class="footer-desc">
-          Platform informasi layanan kunjungan tenaga medis dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.
-        </p>
-        <span class="footer-region">Kabupaten Banyuwangi, Jawa Timur</span>
+        <p class="footer-desc">Platform informasi layanan kunjungan dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
       </div>
 
       <div>
-        <h4 class="footer-heading">Halaman Utama</h4>
+        <h4 class="footer-heading">Halaman</h4>
         <ul class="footer-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="layanan.html">Layanan</a></li>
@@ -264,7 +245,7 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Layanan Informasi</h4>
+        <h4 class="footer-heading">Informasi Layanan</h4>
         <ul class="footer-links">
           <li><a href="layanan.html#dokter">Kunjungan Dokter</a></li>
           <li><a href="layanan.html#perawat">Kunjungan Perawat</a></li>
@@ -274,19 +255,20 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Hubungi Kami</h4>
+        <h4 class="footer-heading">Kontak</h4>
         <ul class="footer-links">
-          <li><a href="kontak.html">Informasi Kontak</a></li>
-          <li><a href="kontak.html#form">Kirim Pesan</a></li>
+          <li><a href="kontak.html">Halaman Kontak</a></li>
+          <li><a href="kontak.html#form">Formulir Pesan</a></li>
           <li><a href="kontak.html#faq">Pertanyaan Umum</a></li>
         </ul>
+        <p class="footer-note">Kabupaten Banyuwangi, Jawa Timur.<br>Nomor telepon, email, dan alamat akan dicantumkan setelah tersedia.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="site-container footer-bottom-inner">
         <p>© 2026 CareWangi. Seluruh hak cipta dilindungi.</p>
-        <p>Platform Informasi Layanan Kesehatan Panggilan ke Rumah — Kabupaten Banyuwangi.</p>
+        <p>Platform informasi layanan kesehatan panggilan ke rumah, Kabupaten Banyuwangi.</p>
       </div>
     </div>
   </footer>

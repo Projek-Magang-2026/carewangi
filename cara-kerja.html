@@ -9,14 +9,13 @@
   <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="cara-kerja">
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
 
-  <!-- =========================================================================
-       NAVBAR
-       ========================================================================= -->
   <header class="site-header" id="nav">
     <div class="site-container nav-container">
       <a href="index.html" class="brand-logo" aria-label="CareWangi Beranda">
@@ -38,12 +37,12 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Beranda</a></li>
           <li><a href="layanan.html" class="nav-link">Layanan</a></li>
-          <li><a href="cara-kerja.html" class="nav-link active">Cara Kerja</a></li>
+          <li><a href="cara-kerja.html" class="nav-link active" aria-current="page">Cara Kerja</a></li>
           <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
           <li><a href="kontak.html" class="nav-link">Kontak</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="kontak.html" class="btn btn-primary btn-sm">Konsultasi Sekarang</a>
+          <a href="kontak.html" class="btn btn-primary btn-sm">Hubungi Kami</a>
         </div>
       </nav>
     </div>
@@ -51,164 +50,119 @@
 
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
-  <main>
-    <!-- =========================================================================
-         A. PAGE HEADER
-         ========================================================================= -->
-    <header class="page-header">
-      <div class="site-container page-header-content">
-        <span class="page-category">Alur Komunikasi Layanan</span>
-        <h1 class="page-title">Bagaimana CareWangi Membantu Anda?</h1>
-        <p class="page-desc">
-          Empat tahapan terarah untuk mempermudah masyarakat Kabupaten Banyuwangi memperoleh informasi dan mengomunikasikan kebutuhan kunjungan medis ke rumah.
-        </p>
+  <main id="main">
+
+    <header class="page-hero">
+      <div class="site-container page-hero-grid">
+        <div>
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Beranda</a><span aria-hidden="true">/</span><span>Cara Kerja</span></nav>
+          <h1>Bagaimana Cara Mendapatkan Layanan CareWangi?</h1>
+          <p class="lead">Empat tahapan komunikasi yang terarah untuk membantu masyarakat Kabupaten Banyuwangi memperoleh informasi dan menyampaikan kebutuhan kunjungan ke rumah.</p>
+        </div>
+        <p class="page-hero-aside">Ini adalah alur komunikasi dan penyampaian informasi, bukan sistem pemesanan otomatis.</p>
       </div>
     </header>
 
-    <!-- =========================================================================
-         B. EMPAT TAHAPAN
-         ========================================================================= -->
-    <section class="section">
-      <div class="site-container steps-container">
-        <div class="steps-stack">
-          <!-- Tahap 1 -->
-          <article class="step-row">
-            <div class="step-num-box">01</div>
-            <div class="step-content">
+    <section class="section" aria-labelledby="tahap-title">
+      <div class="site-container">
+        <h2 id="tahap-title" class="reveal" style="margin-bottom:var(--s6)">Empat tahapan komunikasi</h2>
+        <ol class="timeline">
+          <li class="t-step reveal">
+            <span class="t-no">01</span>
+            <div>
               <h3>Kenali Layanan</h3>
-              <p>
-                Pengguna mempelajari informasi layanan yang tersedia di platform CareWangi, baik untuk kebutuhan kunjungan dokter umum maupun tindakan keperawatan berkala di rumah.
-              </p>
-              <div class="step-detail-hint">
-                Disarankan mengidentifikasi keluhan utama pasien atau jenis perawatan yang dibutuhkan oleh anggota keluarga terlebih dahulu.
-              </div>
+              <p>Pengunjung mempelajari informasi layanan yang tersedia di CareWangi, baik kunjungan dokter maupun kunjungan perawat ke rumah.</p>
+              <p class="t-hint">Identifikasi lebih dulu keluhan utama atau jenis perawatan yang dibutuhkan anggota keluarga.</p>
             </div>
-          </article>
-
-          <!-- Tahap 2 -->
-          <article class="step-row">
-            <div class="step-num-box">02</div>
-            <div class="step-content">
+          </li>
+          <li class="t-step reveal">
+            <span class="t-no">02</span>
+            <div>
               <h3>Hubungi CareWangi</h3>
-              <p>
-                Pengguna menghubungi CareWangi untuk menyampaikan kebutuhan informasi melalui kontak resmi WhatsApp, telepon, atau formulir pesan yang tersedia.
-              </p>
-              <div class="step-detail-hint">
-                Tim CareWangi merespons dengan ramah untuk mendengarkan kebutuhan dan mengarahkan informasi yang relevan.
-              </div>
+              <p>Pengunjung menghubungi CareWangi untuk menyampaikan kebutuhan dan meminta informasi lebih lanjut melalui kanal kontak yang tersedia.</p>
+              <p class="t-hint">Saat ini kanal yang tersedia adalah formulir di halaman Kontak; kontak lain akan dicantumkan setelah tersedia.</p>
             </div>
-          </article>
-
-          <!-- Tahap 3 -->
-          <article class="step-row">
-            <div class="step-num-box">03</div>
-            <div class="step-content">
+          </li>
+          <li class="t-step reveal">
+            <span class="t-no">03</span>
+            <div>
               <h3>Konfirmasi Kebutuhan</h3>
-              <p>
-                Kebutuhan layanan dikomunikasikan dan dikonfirmasi terlebih dahulu, termasuk kondisi umum pasien, riwayat keluhan, serta lokasi alamat tempat tinggal di wilayah Kabupaten Banyuwangi.
-              </p>
-              <div class="step-detail-hint">
-                Konfirmasi lokasi dan kondisi pasien penting untuk memastikan kesiapan serta kesesuaian jadwal tenaga medis setempat.
-              </div>
+              <p>Kebutuhan pengunjung dikomunikasikan untuk memperoleh informasi yang sesuai, termasuk kondisi umum pasien dan lokasi di wilayah Kabupaten Banyuwangi.</p>
+              <p class="t-hint">Informasi lokasi dan kondisi membantu pengunjung memperoleh penjelasan yang lebih tepat.</p>
             </div>
-          </article>
-
-          <!-- Tahap 4 -->
-          <article class="step-row">
-            <div class="step-num-box">04</div>
-            <div class="step-content">
+          </li>
+          <li class="t-step reveal">
+            <span class="t-no">04</span>
+            <div>
               <h3>Informasi Kunjungan</h3>
-              <p>
-                Pengguna mendapatkan informasi lanjutan mengenai layanan, perkiraan waktu kedatangan tenaga kesehatan, serta panduan persiapan yang perlu disiapkan oleh pihak keluarga di rumah.
-              </p>
-              <div class="step-detail-hint">
-                Keluarga dapat mempersiapkan ruangan dan pendampingan agar pemeriksaan berjalan tertib dan higienis.
-              </div>
+              <p>Pengunjung memperoleh informasi lanjutan mengenai kebutuhan kunjungan yang telah dikomunikasikan.</p>
+              <p class="t-hint">Keluarga dapat menyiapkan ruangan dan pendampingan agar proses berjalan tertib dan higienis.</p>
             </div>
-          </article>
-        </div>
-
-        <!-- C. Penjelasan Tambahan & Notifikasi Sistem -->
-        <div class="steps-notice-card">
-          <strong>Pemberitahuan Sistem Komunikasi</strong>
-          <p>
-            Alur di atas bersifat informatif untuk memfasilitasi komunikasi awal antara masyarakat dan tenaga medis. CareWangi saat ini beroperasi sebagai pusat informasi layanan dan belum mengoperasikan sistem pemesanan atau pembayaran otomatis secara daring. Seluruh koordinasi dilakukan melalui komunikasi langsung demi menjamin keakuratan kondisi pasien.
-          </p>
+          </li>
+        </ol>
+        <div class="notice reveal">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/></svg>
+          <p><strong>Catatan tentang alur ini</strong>CareWangi saat ini berfungsi sebagai pusat informasi layanan dan belum mengoperasikan sistem pemesanan, penjadwalan, maupun pembayaran otomatis secara daring.</p>
         </div>
       </div>
     </section>
 
-    <!-- =========================================================================
-         C. PANDUAN PERSIAPAN KELUARGA & D. CTA
-         ========================================================================= -->
-    <section class="section section-soft">
+    <section class="section section-sage" aria-labelledby="siap-title">
       <div class="site-container">
-        <div class="section-header">
-          <span class="section-tag">Persiapan di Rumah</span>
-          <h2 class="section-title">Tips Sebelum Tenaga Medis Berkunjung</h2>
-          <p class="section-lead">
-            Beberapa hal sederhana yang dapat dipersiapkan oleh keluarga untuk mendukung kelancaran pemeriksaan.
-          </p>
-        </div>
-
-        <div class="guidelines-grid">
-          <div class="guideline-item">
-            <h4>Catatan Riwayat Medis</h4>
-            <p>
-              Siapkan riwayat obat yang sedang dikonsumsi, hasil laboratorium sebelumnya (jika ada), atau catatan keluhan pasien agar dokter atau perawat mendapat gambaran yang utuh.
-            </p>
-          </div>
-
-          <div class="guideline-item">
-            <h4>Ruang Pemeriksaan Nyaman</h4>
-            <p>
-              Sediakan area yang tenang, bersih, memiliki pencahayaan memadai, serta akses air bersih untuk memudahkan tenaga kesehatan mencuci tangan sebelum dan sesudah tindakan.
-            </p>
-          </div>
-
-          <div class="guideline-item">
-            <h4>Konfirmasi Titik Alamat</h4>
-            <p>
-              Kirimkan patokan lokasi atau titik lokasi rumah di Banyuwangi secara jelas kepada tim agar tenaga medis dapat mencapai tempat tinggal Anda tepat waktu.
-            </p>
-          </div>
-        </div>
-
-        <!-- CTA Penutup -->
-        <div class="home-banner-cta" style="margin-top: 48px;">
-          <div class="home-banner-text">
-            <h3>Siap Menyampaikan Kebutuhan Anda?</h3>
-            <p>Hubungi kontak CareWangi untuk mendapatkan panduan dan informasi jadwal kunjungan di wilayah Anda.</p>
-          </div>
+        <div class="section-head reveal">
           <div>
-            <a href="kontak.html" class="btn btn-primary">Lanjut ke Halaman Kontak</a>
+            <span class="eyebrow">Persiapan di Rumah</span>
+            <h2 id="siap-title">Yang Dapat Disiapkan Keluarga</h2>
+          </div>
+          <p>Beberapa hal sederhana untuk membantu kelancaran komunikasi dan kunjungan.</p>
+        </div>
+        <div class="notes-grid">
+          <div class="note-item reveal">
+            <h4>Catatan Riwayat Medis</h4>
+            <p>Siapkan daftar obat yang sedang dikonsumsi, hasil laboratorium sebelumnya (jika ada), atau catatan keluhan pasien.</p>
+          </div>
+          <div class="note-item reveal">
+            <h4>Ruang yang Nyaman</h4>
+            <p>Sediakan area yang tenang, bersih, dengan pencahayaan memadai serta akses air bersih.</p>
+          </div>
+          <div class="note-item reveal">
+            <h4>Patokan Lokasi</h4>
+            <p>Siapkan patokan atau titik lokasi rumah di Banyuwangi agar mudah dikomunikasikan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="site-container">
+        <div class="cta-block reveal">
+          <div>
+            <h2 id="cta-title">Siap Menyampaikan Kebutuhan Anda?</h2>
+            <p>Hubungi CareWangi untuk mendapatkan informasi lebih lanjut mengenai layanan kunjungan di wilayah Anda.</p>
+          </div>
+          <div class="cta-side">
+            <a href="kontak.html" class="btn btn-light btn-lg">Lanjut ke Halaman Kontak</a>
+            <small>Layanan informasi untuk wilayah Kabupaten Banyuwangi, Jawa Timur.</small>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
   <footer class="site-footer">
     <div class="site-container footer-grid">
       <div>
         <a href="index.html" class="footer-logo">
-          <svg viewBox="0 0 32 32" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <rect width="32" height="32" rx="6" fill="#146050"/>
             <path d="M16 8v16M8 16h16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          Care<span>Wangi</span>
+          </svg><span class="footer-logo-text"><span style="color:#fff;font-weight:700">Care</span><span>Wangi</span></span>
         </a>
-        <p class="footer-desc">
-          Platform informasi layanan kunjungan tenaga medis dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.
-        </p>
-        <span class="footer-region">Kabupaten Banyuwangi, Jawa Timur</span>
+        <p class="footer-desc">Platform informasi layanan kunjungan dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
       </div>
 
       <div>
-        <h4 class="footer-heading">Halaman Utama</h4>
+        <h4 class="footer-heading">Halaman</h4>
         <ul class="footer-links">
           <li><a href="index.html">Beranda</a></li>
           <li><a href="layanan.html">Layanan</a></li>
@@ -219,7 +173,7 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Layanan Informasi</h4>
+        <h4 class="footer-heading">Informasi Layanan</h4>
         <ul class="footer-links">
           <li><a href="layanan.html#dokter">Kunjungan Dokter</a></li>
           <li><a href="layanan.html#perawat">Kunjungan Perawat</a></li>
@@ -229,19 +183,20 @@
       </div>
 
       <div>
-        <h4 class="footer-heading">Hubungi Kami</h4>
+        <h4 class="footer-heading">Kontak</h4>
         <ul class="footer-links">
-          <li><a href="kontak.html">Informasi Kontak</a></li>
-          <li><a href="kontak.html#form">Kirim Pesan</a></li>
-          <li><a href="layanan.html">Pilihan Layanan</a></li>
+          <li><a href="kontak.html">Halaman Kontak</a></li>
+          <li><a href="kontak.html#form">Formulir Pesan</a></li>
+          <li><a href="kontak.html#faq">Pertanyaan Umum</a></li>
         </ul>
+        <p class="footer-note">Kabupaten Banyuwangi, Jawa Timur.<br>Nomor telepon, email, dan alamat akan dicantumkan setelah tersedia.</p>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="site-container footer-bottom-inner">
         <p>© 2026 CareWangi. Seluruh hak cipta dilindungi.</p>
-        <p>Platform Informasi Layanan Kesehatan Panggilan ke Rumah — Kabupaten Banyuwangi.</p>
+        <p>Platform informasi layanan kesehatan panggilan ke rumah, Kabupaten Banyuwangi.</p>
       </div>
     </div>
   </footer>

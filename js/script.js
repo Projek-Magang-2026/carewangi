@@ -1,6 +1,7 @@
 /**
- * CareWangi — Multi-Page Frontend Interactions
- * Clean • Minimal • Accessible
+ * CareWangi — Interaksi Frontend
+ * Navbar, menu mobile, animasi masuk halus, dan antarmuka formulir kontak.
+ * Catatan: formulir kontak belum terhubung ke backend/pengiriman apa pun.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,45 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const formSuccess = document.getElementById('formSuccess');
 
   /* ------------------------------------------------------------------------
-     1. STICKY NAVBAR
+     1. NAVBAR: garis pemisah saat halaman digulir
      ------------------------------------------------------------------------ */
   const onScroll = () => {
     if (!header) return;
-    if (window.scrollY > 15) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', window.scrollY > 8);
   };
-
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
   /* ------------------------------------------------------------------------
-     2. MULTI-PAGE ACTIVE NAV STATE
+     2. STATUS AKTIF NAVIGASI (berdasarkan data-page)
      ------------------------------------------------------------------------ */
-  const currentPath = window.location.pathname.toLowerCase();
   const currentPage = document.body.getAttribute('data-page') || '';
-
   navLinks.forEach((link) => {
-    const href = link.getAttribute('href').toLowerCase();
-    
-    // Check match against data-page or filename
-    const isHome = (currentPage === 'beranda') && (href === 'index.html' || href === '/' || href === './');
-    const isCurrent = isHome || (href.includes(currentPage) && currentPage !== '');
-
-    if (isCurrent) {
-      link.classList.add('active');
-    } else {
-      // If server or explicit class mismatch, harmonize
-      if (!href.includes(currentPage) && !isHome) {
-        link.classList.remove('active');
-      }
-    }
+    const href = (link.getAttribute('href') || '').toLowerCase();
+    const isHome = currentPage === 'beranda' && href === 'index.html';
+    const isCurrent = isHome || (currentPage !== '' && currentPage !== 'beranda' && href.includes(currentPage));
+    link.classList.toggle('active', isCurrent);
+    if (isCurrent) link.setAttribute('aria-current', 'page');
   });
 
   /* ------------------------------------------------------------------------
-     3. MOBILE DRAWER NAVIGATION
+     3. MENU MOBILE
      ------------------------------------------------------------------------ */
   const setMobileMenu = (open) => {
     if (!menu || !burger) return;
@@ -71,72 +56,87 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  if (burger) {
-    burger.addEventListener('click', () => setMobileMenu());
-  }
-
-  if (backdrop) {
-    backdrop.addEventListener('click', () => setMobileMenu(false));
-  }
+  if (burger) burger.addEventListener('click', () => setMobileMenu());
+  if (backdrop) backdrop.addEventListener('click', () => setMobileMenu(false));
 
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      if (menu && menu.classList.contains('open')) {
-        setMobileMenu(false);
-      }
+      if (menu && menu.classList.contains('open')) setMobileMenu(false);
     });
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu && menu.classList.contains('open')) {
       setMobileMenu(false);
-      burger.focus();
+      if (burger) burger.focus();
     }
   });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 820) {
       document.body.style.overflow = '';
-      if (menu && menu.classList.contains('open')) {
-        setMobileMenu(false);
-      }
+      if (menu && menu.classList.contains('open')) setMobileMenu(false);
     }
   });
 
   /* ------------------------------------------------------------------------
-     4. FRONTEND CONTACT FORM INTERACTION
+     4. ANIMASI MASUK SECTION (subtle, via IntersectionObserver)
+     ------------------------------------------------------------------------ */
+  const revealItems = document.querySelectorAll('.reveal');
+  if (revealItems.length) {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revealItems.forEach((el) => observer.observe(el));
+    } else {
+      revealItems.forEach((el) => el.classList.add('is-in'));
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     5. FORMULIR KONTAK (antarmuka frontend saja — tidak mengirim data)
      ------------------------------------------------------------------------ */
   if (contactForm) {
+    const fields = ['fullName', 'phone', 'district', 'serviceType', 'message']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    const showFeedback = (type, text) => {
+      if (!formSuccess) return;
+      formSuccess.className = 'form-feedback is-visible ' + type;
+      formSuccess.textContent = text;
+    };
+
+    fields.forEach((field) => {
+      field.addEventListener('input', () => field.classList.remove('is-invalid'));
+    });
+
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('fullName');
-      const phone = document.getElementById('phone');
-      const district = document.getElementById('district');
-      const service = document.getElementById('serviceType');
-      const message = document.getElementById('message');
-
-      let isValid = true;
-
-      [name, phone, district, service, message].forEach((field) => {
-        if (!field || !field.value.trim()) {
-          isValid = false;
-          field.style.borderColor = '#DC2626';
-        } else {
-          field.style.borderColor = '';
-        }
+      let firstInvalid = null;
+      fields.forEach((field) => {
+        const empty = !field.value.trim();
+        field.classList.toggle('is-invalid', empty);
+        if (empty && !firstInvalid) firstInvalid = field;
       });
 
-      if (!isValid) {
-        alert('Mohon lengkapi seluruh kolom formulir informasi sebelum mengirimkan pesan.');
+      if (firstInvalid) {
+        showFeedback('error', 'Mohon lengkapi seluruh kolom yang ditandai sebelum melanjutkan.');
+        firstInvalid.focus();
         return;
       }
 
-      if (formSuccess) {
-        formSuccess.classList.add('is-visible');
-        contactForm.reset();
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
+      showFeedback(
+        'success',
+        'Formulir lengkap, tetapi belum terhubung ke sistem pengiriman sehingga pesan Anda belum terkirim. Silakan hubungi CareWangi melalui kanal kontak resmi setelah tersedia.'
+      );
     });
   }
 });
