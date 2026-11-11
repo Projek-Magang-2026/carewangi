@@ -237,12 +237,6 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   object-fit: cover; object-position: 62% center;
   border-radius: 160px 8px 8px 8px;
 }
-.hero-caption {
-  position: absolute; z-index: 2; left: 0; bottom: var(--s6);
-  background: var(--surface); padding: var(--s2) var(--s3); border-radius: var(--r-sm);
-  box-shadow: var(--shadow-soft); font-size: 0.8125rem; line-height: 1.45; color: var(--ink-muted); max-width: 232px;
-}
-.hero-caption strong { display: block; color: var(--ink); font-size: 0.875rem; margin-bottom: 2px; }
 
 /* --------------------------------------------------------------------------
    7. LAYANAN (BERANDA) — editorial bertingkat, tanpa card
@@ -299,18 +293,56 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 .about-text p { color: var(--ink-muted); font-size: 1.0625rem; margin-bottom: var(--s4); max-width: 520px; }
 
 /* --------------------------------------------------------------------------
-   11. CTA PENUTUP
+   11. CTA PENUTUP (Modern Healthcare Editorial)
    -------------------------------------------------------------------------- */
 .cta-section { padding: var(--s12) 0; }
-.cta-block {
-  background: var(--teal); color: #fff; border-radius: var(--r-lg);
+.cta-editorial {
+  background: var(--sage-50);
+  border: 1px solid var(--sage-200);
+  border-radius: var(--r-xl);
   padding: var(--s10) var(--s8);
-  display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s8); align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(10, 46, 39, 0.04);
 }
-.cta-block h2 { color: #fff; margin-bottom: var(--s2); max-width: 15em; }
-.cta-block p { color: rgba(255, 255, 255, 0.8); max-width: 480px; }
-.cta-side { display: flex; flex-direction: column; gap: var(--s2); align-items: flex-start; justify-self: end; }
-.cta-side small { font-size: 0.8125rem; color: rgba(255, 255, 255, 0.7); max-width: 280px; line-height: 1.55; }
+.cta-editorial-content { max-width: 680px; }
+.cta-editorial-content .eyebrow { margin-bottom: var(--s2); }
+.cta-editorial-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin-bottom: var(--s3);
+}
+.cta-editorial-desc {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  margin-bottom: var(--s5);
+  max-width: 580px;
+}
+.cta-editorial-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s3) var(--s4);
+}
+.cta-editorial-meta {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cta-editorial-meta::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal-soft);
+}
 
 /* --------------------------------------------------------------------------
    12. HERO HALAMAN DALAM
@@ -430,20 +462,105 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 .faq-item p { color: var(--ink-muted); font-size: 0.9375rem; }
 
 /* --------------------------------------------------------------------------
-   17. FOOTER
+   17. FOOTER (Modern Healthcare Editorial)
    -------------------------------------------------------------------------- */
-.site-footer { background: var(--teal-deep); color: #C9D6D1; padding-top: var(--s10); font-size: 0.9375rem; }
-.footer-grid { display: grid; grid-template-columns: 1.5fr 0.8fr 1fr 1.1fr; gap: var(--s6); padding-bottom: var(--s8); }
-.footer-logo { display: inline-flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.03em; color: #fff; margin-bottom: var(--s2); }
-.footer-logo span { color: var(--sage); font-weight: 600; }
-.footer-desc { color: #A3B5AE; line-height: 1.7; max-width: 340px; }
-.footer-heading { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; margin-bottom: var(--s2); }
-.footer-links { display: flex; flex-direction: column; gap: 12px; }
-.footer-links a { color: #C9D6D1; }
-.footer-links a:hover { color: #fff; }
-.footer-note { color: #A3B5AE; font-size: 0.875rem; line-height: 1.65; margin-top: var(--s2); }
-.footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding: var(--s3) 0; }
-.footer-bottom-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--s1) var(--s3); font-size: 0.8125rem; color: #8FA39B; }
+.site-footer {
+  background: var(--teal-deep);
+  color: #CAD8D3;
+  padding-top: var(--s10);
+  font-size: 0.9375rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.85fr 1fr 1.15fr;
+  gap: var(--s8);
+  padding-bottom: var(--s9);
+}
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: var(--s3);
+  text-decoration: none;
+}
+.footer-logo-text .brand-white { color: #ffffff; font-weight: 700; }
+.footer-logo-text .brand-sage { color: var(--sage); font-weight: 600; }
+.footer-desc {
+  color: #CAD8D3;
+  line-height: 1.7;
+  max-width: 360px;
+  margin-bottom: var(--s3);
+  font-size: 0.9375rem;
+}
+.footer-region-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: var(--r-full);
+  background: rgba(210, 226, 217, 0.1);
+  border: 1px solid rgba(210, 226, 217, 0.2);
+  color: #E2ECE8;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.footer-region-badge svg {
+  color: var(--teal-soft);
+  flex-shrink: 0;
+}
+.footer-heading {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: var(--s3);
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.footer-links a {
+  color: #CAD8D3;
+  font-size: 0.9375rem;
+  transition: color var(--ease);
+}
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+.footer-note {
+  color: #9DB4AB;
+  font-size: 0.875rem;
+  line-height: 1.65;
+  margin-top: var(--s3);
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: var(--s4) 0;
+}
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s4);
+  font-size: 0.875rem;
+  color: #8FA39B;
+}
+.footer-subtext {
+  color: #8FA39B;
+}
 
 /* --------------------------------------------------------------------------
    18. ANIMASI MASUK (halus, hanya jika JS aktif)
@@ -457,7 +574,7 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 @media (max-width: 1080px) {
   .hero-grid, .about-grid, .detail-grid, .region-grid, .contact-grid, .adv-grid { gap: var(--s8); }
   .steps { gap: var(--s3); }
-  .cta-block { padding: var(--s8) var(--s6); }
+  .cta-editorial { padding: var(--s9) var(--s7); }
 }
 
 @media (max-width: 900px) {
@@ -465,11 +582,10 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 
   .hero { padding: var(--s5) 0 var(--s10); }
   .hero-grid, .about-grid, .detail-grid, .region-grid, .contact-grid, .adv-grid,
-  .page-hero-grid, .cta-block, .section-head { grid-template-columns: 1fr; }
+  .page-hero-grid, .section-head { grid-template-columns: 1fr; }
   .hero-grid { gap: var(--s6); }
   .hero-media { order: -1; padding-left: var(--s2); }
   .hero-photo { aspect-ratio: 4 / 3; border-top-left-radius: 96px; }
-  .hero-caption { bottom: var(--s4); }
 
   .section-head { gap: var(--s2); margin-bottom: var(--s5); }
   .section-head .head-action { justify-self: start; margin-top: var(--s1); }
@@ -487,12 +603,11 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .detail { padding: var(--s8) 0; }
   .notes-grid, .pillars { grid-template-columns: 1fr; gap: var(--s4); }
 
-  .cta-block { padding: var(--s6) var(--s4); gap: var(--s4); }
-  .cta-side { justify-self: start; }
+  .cta-editorial { padding: var(--s8) var(--s6); }
   .page-hero { padding: var(--s6) 0 var(--s5); }
   .page-hero-aside { justify-self: start; margin-top: var(--s2); }
 
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--s5) var(--s4); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--s6) var(--s5); }
   .faq-item { grid-template-columns: 1fr; gap: var(--s1); }
 }
 
@@ -529,10 +644,9 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   h1 { font-size: 2.125rem; }
 
   .hero-actions { flex-direction: column; }
-  .hero-actions .btn, .cta-side .btn { width: 100%; }
+  .hero-actions .btn { width: 100%; }
   .hero-media { padding-left: 0; padding-bottom: var(--s2); }
   .hero-media::before { width: 80%; }
-  .hero-caption { position: static; margin: calc(var(--s3) * -1) var(--s2) 0; position: relative; z-index: 2; max-width: none; }
   .hero-photo { border-top-left-radius: 72px; }
 
   .svc h3 { font-size: 1.375rem; }
@@ -551,12 +665,14 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .t-no { font-size: 2rem; }
   .t-step h3 { font-size: 1.25rem; }
 
-  .cta-block { padding: var(--s5) var(--s3); }
+  .cta-editorial { padding: var(--s6) var(--s4); border-radius: var(--r-lg); }
+  .cta-editorial-actions { flex-direction: column; align-items: stretch; }
+  .cta-editorial-actions .btn { width: 100%; }
   .form-box { padding: var(--s3) var(--s2); }
   .notice { flex-direction: column; gap: var(--s1); }
 
-  .footer-grid { grid-template-columns: 1fr; gap: var(--s4); }
-  .footer-bottom-inner { flex-direction: column; }
+  .footer-grid { grid-template-columns: 1fr; gap: var(--s6); }
+  .footer-bottom-inner { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

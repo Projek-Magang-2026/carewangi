@@ -71,7 +71,6 @@
         </div>
         <div class="hero-media">
           <img src="assets/images/hero-homecare.jpg" alt="Tenaga kesehatan berbincang hangat dengan seorang pasien lanjut usia" class="hero-photo" width="1200" height="793" fetchpriority="high">
-          <p class="hero-caption"><strong>Fokus wilayah Banyuwangi</strong>Informasi layanan kesehatan untuk keluarga di Kabupaten Banyuwangi, Jawa Timur.</p>
         </div>
       </div>
     </section>
@@ -205,16 +204,21 @@
       </div>
     </section>
 
+    <!-- SECTION 6 — CTA PENUTUP -->
     <section class="cta-section" aria-labelledby="cta-title">
       <div class="site-container">
-        <div class="cta-block reveal">
-          <div>
-            <h2 id="cta-title">Mulai dengan Mengenal Kebutuhan Kesehatan Anda.</h2>
-            <p>Hubungi CareWangi untuk mendapatkan informasi lebih lanjut mengenai layanan kunjungan kesehatan ke rumah.</p>
-          </div>
-          <div class="cta-side">
-            <a href="kontak.html" class="btn btn-light btn-lg">Hubungi Kami</a>
-            <small>Layanan informasi untuk wilayah Kabupaten Banyuwangi, Jawa Timur.</small>
+        <div class="cta-editorial reveal">
+          <div class="cta-editorial-content">
+            <span class="eyebrow">Langkah Pertama</span>
+            <h2 id="cta-title" class="cta-editorial-title">Mulai dengan Mengenal Kebutuhan Kesehatan Anda.</h2>
+            <p class="cta-editorial-desc">Hubungi CareWangi untuk mendapatkan informasi lebih lanjut mengenai layanan kunjungan kesehatan ke rumah.</p>
+            <div class="cta-editorial-actions">
+              <a href="kontak.html" class="btn btn-primary btn-lg">
+                <span>Hubungi Kami</span>
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+              </a>
+              <span class="cta-editorial-meta">Layanan informasi khusus wilayah Kabupaten Banyuwangi</span>
+            </div>
           </div>
         </div>
       </div>
@@ -223,14 +227,19 @@
 
   <footer class="site-footer">
     <div class="site-container footer-grid">
-      <div>
-        <a href="index.html" class="footer-logo">
-          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="32" height="32" rx="6" fill="#146050"/>
-            <path d="M16 8v16M8 16h16" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-          </svg><span class="footer-logo-text"><span style="color:#fff;font-weight:700">Care</span><span>Wangi</span></span>
+      <div class="footer-col-brand">
+        <a href="index.html" class="footer-logo" aria-label="CareWangi Beranda">
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#146050"/>
+            <path d="M16 8v16M8 16h16" stroke="#ffffff" stroke-width="2.75" stroke-linecap="round"/>
+          </svg>
+          <span class="footer-logo-text"><span class="brand-white">Care</span><span class="brand-sage">Wangi</span></span>
         </a>
         <p class="footer-desc">Platform informasi layanan kunjungan dokter dan perawat ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
+        <div class="footer-region-badge">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+          <span>Kabupaten Banyuwangi, Jawa Timur</span>
+        </div>
       </div>
 
       <div>
@@ -267,8 +276,8 @@
 
     <div class="footer-bottom">
       <div class="site-container footer-bottom-inner">
-        <p>© 2026 CareWangi. Seluruh hak cipta dilindungi.</p>
-        <p>Platform informasi layanan kesehatan panggilan ke rumah, Kabupaten Banyuwangi.</p>
+        <p>© <span id="currentYear">2026</span> CareWangi. Seluruh hak cipta dilindungi.</p>
+        <p class="footer-subtext">Platform informasi layanan kesehatan panggilan ke rumah, Kabupaten Banyuwangi.</p>
       </div>
     </div>
   </footer>
