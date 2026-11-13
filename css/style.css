@@ -434,7 +434,7 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
    Layanan 02 = compact (gambar vertikal, panel Soft Sage yang saling menumpuk). */
 .svc-grid {
   display: grid;
-  gap: var(--s12) 0;
+  gap: var(--s10) 0;
 }
 .svc {
   display: grid;
@@ -501,52 +501,57 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   gap: 14px;
 }
 
-/* Layanan 01 — featured */
+/* Layanan 01 — featured: tinggi teks = tinggi gambar (sisi atas & bawah sejajar) */
+.svc-featured { align-items: stretch; }
 .svc-featured .svc-media {
   grid-column: 1 / 8;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 10;
 }
 .svc-featured .svc-photo { object-position: 50% 30%; }
 .svc-featured .svc-body {
   grid-column: 9 / 13;
-  align-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: var(--s3);
   border-top: 1px solid var(--line-strong);
 }
-.svc-featured .svc-title { font-size: clamp(2rem, 3.2vw, 2.75rem); }
-.svc-featured .svc-desc { font-size: 1.0625rem; max-width: 420px; }
+.svc-featured .svc-kicker { margin-bottom: auto; }
+.svc-featured .svc-title { font-size: clamp(1.75rem, 2.6vw, 2.375rem); }
+.svc-featured .svc-desc { font-size: 1rem; max-width: 400px; }
+.svc-featured .svc-link { margin-top: 0; }
 
-/* Layanan 02 — compact */
-.svc-compact { padding-block: var(--s6); }
+/* Layanan 02 — compact: panel Soft Sage setinggi gambar, gambar menumpuk 1 kolom */
+.svc-compact { align-items: stretch; }
 .svc-compact::before {
   content: "";
   grid-column: 1 / 10;
   grid-row: 1;
-  align-self: stretch;
   background: var(--sage-100);
   border-radius: var(--r-md);
 }
 .svc-compact .svc-body {
-  grid-column: 1 / 7;
+  grid-column: 1 / 8;
   grid-row: 1;
-  padding: var(--s4) 0 var(--s4) var(--s6);
+  align-self: center;
+  padding: var(--s5) 0 var(--s5) var(--s6);
   position: relative;
   z-index: 2;
 }
 .svc-compact .svc-media {
-  grid-column: 8 / 13;
+  grid-column: 9 / 13;
   grid-row: 1;
-  aspect-ratio: 4 / 5;
-  margin-block: calc(var(--s6) * -1);
+  aspect-ratio: 5 / 6;
   z-index: 1;
 }
 .svc-compact .svc-photo { object-position: 52% 50%; }
 .svc-compact .svc-title { font-size: clamp(1.625rem, 2.4vw, 2rem); }
 .svc-compact .svc-desc { font-size: 1rem; max-width: 380px; }
+.svc-compact .svc-link { margin-top: 0; }
 
 /* Penutup section */
 .svc-more {
-  margin-top: var(--s12);
+  margin-top: var(--s10);
   padding-top: var(--s4);
   border-top: 1px solid var(--line-strong);
   display: flex;
@@ -1145,14 +1150,15 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
     justify-self: start;
     max-width: none;
   }
-  .svc-grid { gap: var(--s10) 0; }
-  .svc-featured .svc-media { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
-  .svc-featured .svc-body { grid-column: 1 / 9; margin-top: var(--s4); align-self: start; }
-  .svc-compact { padding-block: var(--s5); }
-  .svc-compact::before { grid-column: 1 / 11; }
-  .svc-compact .svc-body { grid-column: 1 / 8; padding: var(--s3) 0 var(--s3) var(--s4); }
-  .svc-compact .svc-media { grid-column: 7 / 13; margin-block: calc(var(--s5) * -1); }
-  .svc-more { margin-top: var(--s10); }
+  .svc-grid { gap: var(--s8) 0; }
+  .svc-featured { align-items: start; }
+  .svc-featured .svc-media { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+  .svc-featured .svc-body { grid-column: 1 / -1; margin-top: var(--s3); display: block; }
+  .svc-featured .svc-kicker { margin-bottom: var(--s2); }
+  .svc-compact::before { grid-column: 1 / -1; }
+  .svc-compact .svc-body { grid-column: 1 / 8; padding: var(--s4) 0 var(--s4) var(--s4); }
+  .svc-compact .svc-media { grid-column: 8 / 13; aspect-ratio: 4 / 5; }
+  .svc-more { margin-top: var(--s8); }
 
   .adv-intro { position: static; }
   .adv-grid { gap: var(--s5); }
@@ -1248,7 +1254,7 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .svc-featured .svc-body { margin-top: var(--s3); }
   .svc-compact { padding-block: 0; }
   .svc-compact::before { display: none; }
-  .svc-compact .svc-media { margin-block: 0; aspect-ratio: 4 / 5; }
+  .svc-compact .svc-media { margin-block: 0; aspect-ratio: 1 / 1; }
   .svc-compact .svc-body { margin-top: calc(var(--s5) * -1); margin-inline: var(--s2); padding: var(--s4) var(--s3); background: var(--sage-100); border-radius: var(--r-md); }
   .svc-featured .svc-title, .svc-compact .svc-title { font-size: 1.75rem; }
   .svc-more { margin-top: var(--s8); flex-direction: column; align-items: flex-start; gap: var(--s3); }
