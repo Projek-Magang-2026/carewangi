@@ -521,32 +521,26 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 .svc-featured .svc-desc { font-size: 1rem; max-width: 400px; }
 .svc-featured .svc-link { margin-top: 0; }
 
-/* Layanan 02 — compact: panel Soft Sage setinggi gambar, gambar menumpuk 1 kolom */
+/* Layanan 02 — gambar di kanan (lebih ramping), teks di kiri; tinggi teks = tinggi gambar */
 .svc-compact { align-items: stretch; }
-.svc-compact::before {
-  content: "";
-  grid-column: 1 / 10;
-  grid-row: 1;
-  background: var(--sage-100);
-  border-radius: var(--r-md);
-}
-.svc-compact .svc-body {
-  grid-column: 1 / 8;
-  grid-row: 1;
-  align-self: center;
-  padding: var(--s5) 0 var(--s5) var(--s6);
-  position: relative;
-  z-index: 2;
-}
 .svc-compact .svc-media {
-  grid-column: 9 / 13;
+  grid-column: 8 / 13;
   grid-row: 1;
-  aspect-ratio: 5 / 6;
-  z-index: 1;
+  aspect-ratio: 8 / 7;
 }
 .svc-compact .svc-photo { object-position: 52% 50%; }
-.svc-compact .svc-title { font-size: clamp(1.625rem, 2.4vw, 2rem); }
-.svc-compact .svc-desc { font-size: 1rem; max-width: 380px; }
+.svc-compact .svc-body {
+  grid-column: 1 / 7;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: var(--s3);
+  border-top: 1px solid var(--line-strong);
+}
+.svc-compact .svc-kicker { margin-bottom: auto; }
+.svc-compact .svc-title { font-size: clamp(1.75rem, 2.6vw, 2.375rem); }
+.svc-compact .svc-desc { font-size: 1rem; max-width: 400px; }
 .svc-compact .svc-link { margin-top: 0; }
 
 /* Penutup section */
@@ -1155,9 +1149,10 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .svc-featured .svc-media { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
   .svc-featured .svc-body { grid-column: 1 / -1; margin-top: var(--s3); display: block; }
   .svc-featured .svc-kicker { margin-bottom: var(--s2); }
-  .svc-compact::before { grid-column: 1 / -1; }
-  .svc-compact .svc-body { grid-column: 1 / 8; padding: var(--s4) 0 var(--s4) var(--s4); }
-  .svc-compact .svc-media { grid-column: 8 / 13; aspect-ratio: 4 / 5; }
+  .svc-compact { align-items: start; }
+  .svc-compact .svc-media { grid-column: 1 / -1; grid-row: 1; aspect-ratio: 16 / 9; }
+  .svc-compact .svc-body { grid-column: 1 / -1; grid-row: 2; margin-top: var(--s3); display: block; }
+  .svc-compact .svc-kicker { margin-bottom: var(--s2); }
   .svc-more { margin-top: var(--s8); }
 
   .adv-intro { position: static; }
@@ -1252,10 +1247,8 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .svc-grid { gap: var(--s8) 0; }
   .svc { display: block; }
   .svc-featured .svc-body { margin-top: var(--s3); }
-  .svc-compact { padding-block: 0; }
-  .svc-compact::before { display: none; }
-  .svc-compact .svc-media { margin-block: 0; aspect-ratio: 1 / 1; }
-  .svc-compact .svc-body { margin-top: calc(var(--s5) * -1); margin-inline: var(--s2); padding: var(--s4) var(--s3); background: var(--sage-100); border-radius: var(--r-md); }
+  .svc-compact .svc-media { aspect-ratio: 4 / 3; }
+  .svc-compact .svc-body { margin-top: var(--s3); }
   .svc-featured .svc-title, .svc-compact .svc-title { font-size: 1.75rem; }
   .svc-more { margin-top: var(--s8); flex-direction: column; align-items: flex-start; gap: var(--s3); }
   .svc-more .btn { width: 100%; }
