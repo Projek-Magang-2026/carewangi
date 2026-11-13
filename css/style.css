@@ -405,21 +405,149 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
 }
 
 /* --------------------------------------------------------------------------
-   7. LAYANAN (BERANDA) — editorial bertingkat, tanpa card
+   7. LAYANAN (BERANDA) — Modern Healthcare Editorial Showcase
    -------------------------------------------------------------------------- */
-.svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); }
-.svc:nth-child(2) { margin-top: var(--s10); }
+.svc-section-head {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--s8);
+  align-items: end;
+  margin-bottom: var(--s8);
+  padding-bottom: var(--s5);
+  border-bottom: 1px solid var(--line);
+}
+.svc-section-head h2 {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.svc-section-head p {
+  color: var(--ink-muted);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  max-width: 440px;
+  justify-self: end;
+}
 
-.svc-photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); margin-bottom: var(--s4); }
-.svc:nth-child(1) .svc-photo { object-position: 45% 25%; }
-.svc:nth-child(2) .svc-photo { object-position: 50% 40%; }
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s8);
+  align-items: start;
+}
+.svc {
+  display: flex;
+  flex-direction: column;
+}
+.svc-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--sage-100);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 4px 20px rgba(10, 46, 39, 0.05);
+  margin-bottom: var(--s4);
+}
+.svc-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svc:nth-child(1) .svc-photo {
+  object-position: 45% 25%;
+}
+.svc:nth-child(2) .svc-photo {
+  object-position: 50% 35%;
+}
+.svc:hover .svc-photo {
+  transform: scale(1.03);
+}
 
-.svc-kicker { display: block; font-size: 0.8125rem; font-weight: 600; color: var(--teal-soft); letter-spacing: 0.04em; margin-bottom: var(--s1); }
-.svc h3 { font-size: 1.625rem; margin-bottom: var(--s2); }
-.svc p { color: var(--ink-muted); margin-bottom: var(--s3); max-width: 480px; }
+.svc-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.svc-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+.svc-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 2px;
+  background: var(--teal);
+  border-radius: 1px;
+}
+.svc-title, .svc h3 {
+  font-size: clamp(1.5rem, 2.2vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: var(--s2);
+}
+.svc-desc, .svc p {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: var(--s3);
+  max-width: 500px;
+}
+.svc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--teal);
+  padding: 4px 0 6px;
+  border-bottom: 1.5px solid rgba(13, 80, 67, 0.25);
+  transition: color var(--ease), border-color var(--ease), gap var(--ease);
+}
+.svc-link svg {
+  color: var(--teal);
+  transition: transform var(--ease);
+}
+.svc-link:hover {
+  color: var(--teal-dark);
+  border-color: var(--teal);
+  gap: 12px;
+}
+.svc-link:hover svg {
+  transform: translateX(3px);
+}
 
-.svc-more { margin-top: var(--s10); padding-top: var(--s4); border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: var(--s3); flex-wrap: wrap; }
-.svc-more p { color: var(--ink-muted); font-size: 0.9375rem; }
+.svc-more {
+  margin-top: var(--s8);
+  padding-top: var(--s5);
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s4);
+  flex-wrap: wrap;
+}
+.svc-more-text, .svc-more p {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0;
+}
 
 /* --------------------------------------------------------------------------
    8. KEUNGGULAN (BERANDA)
@@ -993,9 +1121,27 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   .section-head { gap: var(--s2); margin-bottom: var(--s5); }
   .section-head .head-action { justify-self: start; margin-top: var(--s1); }
 
-  .svc-grid { gap: var(--s6); }
-  .svc:nth-child(2) { margin-top: 0; }
-  .svc-grid { grid-template-columns: 1fr; }
+  .svc-section-head {
+    grid-template-columns: 1fr;
+    gap: var(--s2);
+    margin-bottom: var(--s6);
+    padding-bottom: var(--s4);
+  }
+  .svc-section-head p {
+    justify-self: start;
+    max-width: none;
+  }
+  .svc-grid {
+    grid-template-columns: 1fr;
+    gap: var(--s8);
+  }
+  .svc-media {
+    margin-bottom: var(--s3);
+  }
+  .svc-more {
+    margin-top: var(--s6);
+    padding-top: var(--s4);
+  }
 
   .adv-intro { position: static; }
   .adv-grid { gap: var(--s5); }
@@ -1086,8 +1232,8 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
     max-width: none;
   }
 
-  .svc h3 { font-size: 1.375rem; }
-  .svc-more { flex-direction: column; align-items: flex-start; }
+  .svc-title, .svc h3 { font-size: 1.375rem; }
+  .svc-more { flex-direction: column; align-items: flex-start; gap: var(--s3); }
   .svc-more .btn { width: 100%; }
 
   .adv-list li { grid-template-columns: 48px 1fr; gap: var(--s2); padding: var(--s3) 0; }
