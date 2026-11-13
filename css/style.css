@@ -859,10 +859,11 @@ h4 { font-size: 1rem; line-height: 1.4; letter-spacing: -0.01em; }
   margin-top: var(--s3);
 }
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  padding: var(--s4) 0;
+  padding-bottom: var(--s4);
 }
 .footer-bottom-inner {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: var(--s4);
   display: flex;
   justify-content: space-between;
   align-items: center;
