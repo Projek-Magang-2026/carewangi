@@ -56,11 +56,16 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="site-container hero-grid">
         <div class="hero-content">
-          <span class="eyebrow">Layanan Panggilan ke Rumah</span>
           <h1 class="hero-title" id="hero-title">Perawatan Kesehatan Lebih Dekat, <span class="hl">Langsung di Rumah Anda.</span></h1>
           <p class="hero-desc">CareWangi membantu masyarakat mendapatkan informasi layanan kunjungan dokter dan perawat ke rumah, khusus untuk wilayah Kabupaten Banyuwangi.</p>
           <div class="hero-actions">
-            <a href="layanan.html" class="btn btn-primary btn-lg"><span>Jelajahi Layanan</span><svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg></a>
+            <a href="layanan.html" class="btn btn-primary btn-lg btn-jelajah">
+              <span class="btn-care-icon-wrap" aria-hidden="true">
+                <img src="assets/icons/care-walk.gif" alt="" class="btn-care-gif" width="34" height="34">
+              </span>
+              <span>Jelajahi Layanan</span>
+              <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>
+            </a>
             <a href="kontak.html" class="btn btn-outline btn-lg">Hubungi Kami</a>
           </div>
           <ul class="hero-facts">
@@ -72,10 +77,13 @@
         <div class="hero-media">
           <div class="hero-dot-pattern" aria-hidden="true"></div>
           <div class="hero-image-wrap">
-            <span class="hero-editorial-tag" aria-hidden="true">HOME HEALTHCARE · BANYUWANGI</span>
             <img src="assets/images/hero-homecare.jpg" alt="Tenaga kesehatan berbincang hangat dengan seorang pasien lanjut usia" class="hero-photo" width="1200" height="793" fetchpriority="high">
           </div>
-          <div class="hero-info-card">
+          <div class="hero-info-card" id="heroInfoCard">
+            <div class="hero-info-badge">
+              <span class="pulse-dot"></span>
+              <span>Wilayah Khusus</span>
+            </div>
             <strong class="hero-info-title">Fokus Wilayah Banyuwangi</strong>
             <p class="hero-info-desc">Platform informasi layanan kesehatan kunjungan ke rumah untuk masyarakat Kabupaten Banyuwangi, Jawa Timur.</p>
           </div>
@@ -129,28 +137,36 @@
         </div>
         <ol class="adv-list reveal">
           <li>
-            <span class="adv-no">01</span>
+            <span class="adv-icon-wrap" aria-hidden="true">
+              <img src="assets/icons/keunggulan-banyuwangi.gif" alt="" class="adv-gif" width="48" height="48">
+            </span>
             <div>
               <h3>Fokus di Kabupaten Banyuwangi</h3>
               <p>Seluruh informasi layanan disusun khusus untuk masyarakat yang berdomisili di Kabupaten Banyuwangi.</p>
             </div>
           </li>
           <li>
-            <span class="adv-no">02</span>
+            <span class="adv-icon-wrap" aria-hidden="true">
+              <img src="assets/icons/keunggulan-informasi.gif" alt="" class="adv-gif" width="48" height="48">
+            </span>
             <div>
               <h3>Informasi yang mudah dipahami</h3>
               <p>Penjelasan layanan kesehatan disampaikan dengan bahasa yang lugas dan jelas.</p>
             </div>
           </li>
           <li>
-            <span class="adv-no">03</span>
+            <span class="adv-icon-wrap" aria-hidden="true">
+              <img src="assets/icons/keunggulan-kunjungan.gif" alt="" class="adv-gif" width="48" height="48">
+            </span>
             <div>
               <h3>Membantu informasi kunjungan ke rumah</h3>
               <p>Masyarakat dapat mengenal layanan kunjungan dokter dan perawat sebelum memutuskan langkah berikutnya.</p>
             </div>
           </li>
           <li>
-            <span class="adv-no">04</span>
+            <span class="adv-icon-wrap" aria-hidden="true">
+              <img src="assets/icons/keunggulan-komunikasi.gif" alt="" class="adv-gif" width="48" height="48">
+            </span>
             <div>
               <h3>Komunikasi kebutuhan yang lebih mudah</h3>
               <p>Kebutuhan layanan dapat disampaikan langsung kepada CareWangi untuk memperoleh informasi lebih lanjut.</p>
